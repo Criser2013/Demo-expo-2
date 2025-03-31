@@ -1,0 +1,4684 @@
+{
+  "id": "3d080e8c-e138-4d06-9037-5b4782b395ad",
+  "version": "2.0",
+  "name": "Tablas de decisión - Rappi",
+  "url": "https://rappi-payment.onrender.com/payment",
+  "tests": [{
+    "id": "490f663e-07c3-41eb-bb8d-5fecbaf1807d",
+    "name": "R1 - Carrito vacío",
+    "commands": [{
+      "id": "5a777187-d5a0-45bf-80b6-472ca163e056",
+      "comment": "",
+      "command": "open",
+      "target": "https://rappi-payment.onrender.com/payment",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "daee1af4-d604-43a0-9d4a-23d366ffb5d1",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1280x720",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "23cc0146-13ed-45ae-9344-28a9bcbefd37",
+      "comment": "",
+      "command": "waitForElementPresent",
+      "target": "css=.font-bold",
+      "targets": [
+        ["css=.font-bold", "css:finder"],
+        ["xpath=//a/span", "xpath:position"],
+        ["xpath=//span[contains(.,'Rappi')]", "xpath:innerText"]
+      ],
+      "value": "1200000"
+    }, {
+      "id": "66049d7d-4aad-4ca3-b24d-942d43a19d4f",
+      "comment": "",
+      "command": "click",
+      "target": "css=.bg-card:nth-child(2) .flex-1 > .flex:nth-child(2)",
+      "targets": [
+        ["css=.bg-card:nth-child(2) .flex-1 > .flex:nth-child(2)", "css:finder"],
+        ["xpath=//div[@id='radix-«r0»-content-restaurants']/div/div[2]/div[2]/div/div/div[2]/div", "xpath:idRelative"],
+        ["xpath=//div[2]/div/div/div[2]/div", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "3e86b341-fe7d-4a23-8848-f85fbc4c4bbd",
+      "comment": "",
+      "command": "assertElementNotPresent",
+      "target": "css=.justify-between > .rounded-md",
+      "targets": [],
+      "value": ""
+    }]
+  }, {
+    "id": "e8805b37-481c-49e3-bfc5-d21bb45b0ddc",
+    "name": "R3 - Código promocional válido",
+    "commands": [{
+      "id": "48cfaa95-2a99-458a-b66a-ccc7e3e9786e",
+      "comment": "",
+      "command": "open",
+      "target": "https://rappi-payment.onrender.com/payment",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "5cee2851-ce4c-483f-a600-50c203ff4270",
+      "comment": "",
+      "command": "executeScript",
+      "target": "return [\"RAPPI10\",\"WELCOME\"]",
+      "targets": [],
+      "value": "codigos"
+    }, {
+      "id": "7e093cb2-8c5f-4df3-940a-f557f41a3626",
+      "comment": "",
+      "command": "waitForElementPresent",
+      "target": "css=.font-bold",
+      "targets": [
+        ["css=.font-bold", "css:finder"],
+        ["xpath=//a/span", "xpath:position"],
+        ["xpath=//span[contains(.,'Rappi')]", "xpath:innerText"]
+      ],
+      "value": "1200000"
+    }, {
+      "id": "8f4487fb-62c7-4811-b38e-7130732f6218",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1280x720",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "8abe3f4d-8dd8-4d79-8a61-2835d75ac408",
+      "comment": "",
+      "command": "forEach",
+      "target": "codigos",
+      "targets": [],
+      "value": "i"
+    }, {
+      "id": "b82689a0-7d08-4c8d-97be-e9e015410be2",
+      "comment": "",
+      "command": "click",
+      "target": "css=.bg-card:nth-child(2) > .p-4 .font-semibold",
+      "targets": [
+        ["css=.bg-card:nth-child(2) > .p-4 .font-semibold", "css:finder"],
+        ["xpath=//div[@id='radix-«r0»-content-restaurants']/div/div[2]/div[2]/div/div/div[2]/h3", "xpath:idRelative"],
+        ["xpath=//div[2]/div/div/div[2]/h3", "xpath:position"],
+        ["xpath=//h3[contains(.,'Fast Food Heaven')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "120efa75-3bce-4be4-92f0-c9a64748d995",
+      "comment": "",
+      "command": "click",
+      "target": "css=.bg-card:nth-child(2) .inline-flex",
+      "targets": [
+        ["css=.bg-card:nth-child(2) .inline-flex", "css:finder"],
+        ["xpath=//div[@id='radix-«r0»-content-products']/div/div[3]/div[2]/div/div/div[2]/div/button", "xpath:idRelative"],
+        ["xpath=//div[2]/div/div/div[2]/div/button", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "b2f8cdec-17a6-40ad-9d8d-345e742b87ee",
+      "comment": "",
+      "command": "click",
+      "target": "css=.justify-between > .rounded-md",
+      "targets": [
+        ["css=.justify-between > .rounded-md", "css:finder"],
+        ["xpath=//div[@id='radix-«r0»-content-products']/div/div/button", "xpath:idRelative"],
+        ["xpath=//div[3]/div[2]/div/div/button", "xpath:position"],
+        ["xpath=//button[contains(.,'1 items • $11.50')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "2e723ada-c5ea-4faf-9b07-c795229ccae7",
+      "comment": "",
+      "command": "type",
+      "target": "id=promo-code",
+      "targets": [
+        ["id=promo-code", "id"],
+        ["css=#promo-code", "css:finder"],
+        ["xpath=//input[@id='promo-code']", "xpath:attributes"],
+        ["xpath=//div[@id='radix-«r0»-content-cart']/div/div[3]/div/div/div/div/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "${i}"
+    }, {
+      "id": "57a563c1-8593-4719-992c-b596a2396bb9",
+      "comment": "",
+      "command": "click",
+      "target": "css=.inline-flex:nth-child(2)",
+      "targets": [
+        ["css=.inline-flex:nth-child(2)", "css:finder"],
+        ["xpath=//div[@id='radix-«r0»-content-cart']/div/div[3]/div/div/div/button", "xpath:idRelative"],
+        ["xpath=//div[3]/div/div[3]/div/div/div/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Aplicar')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "a01c7093-558b-45bb-b5c4-5c7e46ba1a74",
+      "comment": "",
+      "command": "assertElementPresent",
+      "target": "css=.text-green-600:nth-child(3)",
+      "targets": [
+        ["css=.text-green-600:nth-child(3)", "css:finder"],
+        ["xpath=//div[@id='radix-«r0»-content-cart']/div/div[3]/div/div/p", "xpath:idRelative"],
+        ["xpath=//div[3]/div/div/p", "xpath:position"],
+        ["xpath=//p[contains(.,'Descuento aplicado')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "38968078-49e8-4999-a8d6-0a8676f474c2",
+      "comment": "",
+      "command": "click",
+      "target": "css=.bg-primary:nth-child(1)",
+      "targets": [
+        ["css=.bg-primary:nth-child(1)", "css:finder"],
+        ["xpath=//div[@id='radix-«r0»-content-cart']/div/div[4]/div[3]/button", "xpath:idRelative"],
+        ["xpath=//div[4]/div[3]/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Continuar con la dirección')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "fa07c7e9-5f33-4eac-a224-8c9600dc8396",
+      "comment": "",
+      "command": "assertText",
+      "target": "css=.font-bold:nth-child(2)",
+      "targets": [
+        ["css=.font-bold:nth-child(2)", "css:finder"],
+        ["xpath=//div[@id='radix-«r0»-content-address']/div/div/h2", "xpath:idRelative"],
+        ["xpath=//div/div/h2", "xpath:position"],
+        ["xpath=//h2[contains(.,'Selecciona una dirección')]", "xpath:innerText"]
+      ],
+      "value": "Selecciona una dirección"
+    }, {
+      "id": "01792359-c7c1-40c9-9de3-931989552bdd",
+      "comment": "",
+      "command": "open",
+      "target": "https://rappi-payment.onrender.com/payment",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "05933411-7a80-4e52-a249-cde609999e43",
+      "comment": "",
+      "command": "end",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }]
+  }, {
+    "id": "48fe6632-eab8-4af8-bfe7-59a6f126cfe9",
+    "name": "R2 - Código promocional inválido",
+    "commands": [{
+      "id": "c28268fe-be6f-42a7-aafb-a4a7fe62e314",
+      "comment": "",
+      "command": "open",
+      "target": "https://rappi-payment.onrender.com/payment",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "ec96411d-9224-443e-894c-e827540f0964",
+      "comment": "",
+      "command": "executeScript",
+      "target": "return [\"DISCOUNT\",\"\"]",
+      "targets": [],
+      "value": "codigos"
+    }, {
+      "id": "0311d602-7110-4ddb-ae9c-cd635b794a65",
+      "comment": "",
+      "command": "waitForElementPresent",
+      "target": "css=.font-bold",
+      "targets": [
+        ["css=.font-bold", "css:finder"],
+        ["xpath=//a/span", "xpath:position"],
+        ["xpath=//span[contains(.,'Rappi')]", "xpath:innerText"]
+      ],
+      "value": "1200000"
+    }, {
+      "id": "59c9cbe2-f799-4ac6-88e8-cad08da7d39c",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1280x720",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "9ee2bf40-d089-44e3-a4c8-fd316c6fe0ec",
+      "comment": "",
+      "command": "forEach",
+      "target": "codigos",
+      "targets": [],
+      "value": "i"
+    }, {
+      "id": "1d664b90-e008-4067-a78f-df4265a8ec66",
+      "comment": "",
+      "command": "click",
+      "target": "css=.bg-card:nth-child(2) > .p-4 .font-semibold",
+      "targets": [
+        ["css=.bg-card:nth-child(2) > .p-4 .font-semibold", "css:finder"],
+        ["xpath=//div[@id='radix-«r0»-content-restaurants']/div/div[2]/div[2]/div/div/div[2]/h3", "xpath:idRelative"],
+        ["xpath=//div[2]/div/div/div[2]/h3", "xpath:position"],
+        ["xpath=//h3[contains(.,'Fast Food Heaven')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "794c8a7a-194c-4f8b-9885-e23f75d895cc",
+      "comment": "",
+      "command": "click",
+      "target": "css=.bg-card:nth-child(2) .inline-flex",
+      "targets": [
+        ["css=.bg-card:nth-child(2) .inline-flex", "css:finder"],
+        ["xpath=//div[@id='radix-«r0»-content-products']/div/div[3]/div[2]/div/div/div[2]/div/button", "xpath:idRelative"],
+        ["xpath=//div[2]/div/div/div[2]/div/button", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "77f189c7-4e1f-4f95-be16-092dec57dc2d",
+      "comment": "",
+      "command": "click",
+      "target": "css=.justify-between > .rounded-md",
+      "targets": [
+        ["css=.justify-between > .rounded-md", "css:finder"],
+        ["xpath=//div[@id='radix-«r0»-content-products']/div/div/button", "xpath:idRelative"],
+        ["xpath=//div[3]/div[2]/div/div/button", "xpath:position"],
+        ["xpath=//button[contains(.,'1 items • $11.50')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "037deccd-c200-489e-baa7-507faebfdee6",
+      "comment": "",
+      "command": "type",
+      "target": "id=promo-code",
+      "targets": [
+        ["id=promo-code", "id"],
+        ["css=#promo-code", "css:finder"],
+        ["xpath=//input[@id='promo-code']", "xpath:attributes"],
+        ["xpath=//div[@id='radix-«r0»-content-cart']/div/div[3]/div/div/div/div/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "${i}"
+    }, {
+      "id": "9a107019-fa93-4cbe-bff6-ad4865d8dbd7",
+      "comment": "",
+      "command": "click",
+      "target": "css=.inline-flex:nth-child(2)",
+      "targets": [
+        ["css=.inline-flex:nth-child(2)", "css:finder"],
+        ["xpath=//div[@id='radix-«r0»-content-cart']/div/div[3]/div/div/div/button", "xpath:idRelative"],
+        ["xpath=//div[3]/div/div[3]/div/div/div/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Aplicar')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "1fc87b19-be35-4ee0-977a-3694be9bd95b",
+      "comment": "",
+      "command": "click",
+      "target": "css=.bg-primary:nth-child(1)",
+      "targets": [
+        ["css=.bg-primary:nth-child(1)", "css:finder"],
+        ["xpath=//div[@id='radix-«r0»-content-cart']/div/div[4]/div[3]/button", "xpath:idRelative"],
+        ["xpath=//div[4]/div[3]/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Continuar con la dirección')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "6a1d6de4-68c0-4374-8440-6c3f2c2e6b63",
+      "comment": "",
+      "command": "assertElementNotPresent",
+      "target": "css=.text-green-600:nth-child(3)",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "e3d8ad7b-717c-454e-8919-dd47b4b92726",
+      "comment": "",
+      "command": "assertText",
+      "target": "css=.font-bold:nth-child(2)",
+      "targets": [
+        ["css=.font-bold:nth-child(2)", "css:finder"],
+        ["xpath=//div[@id='radix-«r0»-content-address']/div/div/h2", "xpath:idRelative"],
+        ["xpath=//div/div/h2", "xpath:position"],
+        ["xpath=//h2[contains(.,'Selecciona una dirección')]", "xpath:innerText"]
+      ],
+      "value": "Selecciona una dirección"
+    }, {
+      "id": "7bbc0841-e324-4cae-a165-25ab35cc806e",
+      "comment": "",
+      "command": "open",
+      "target": "https://rappi-payment.onrender.com/payment",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "48105652-9245-4d80-9afc-412515e174ca",
+      "comment": "",
+      "command": "end",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }]
+  }, {
+    "id": "af4becb8-930e-4c0a-b756-3096e7e38f40",
+    "name": "R8 - Pago - código inválido",
+    "commands": [{
+      "id": "8e0825cc-bd43-4184-b906-a048b3596bf1",
+      "comment": "",
+      "command": "open",
+      "target": "https://rappi-payment.onrender.com/payment",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "bed2302a-5bd7-48b2-8e05-01f12bc5fbab",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1280x720",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "8558b4cb-fbdb-40bc-9452-3641ed253cce",
+      "comment": "",
+      "command": "waitForElementPresent",
+      "target": "css=.font-bold",
+      "targets": [
+        ["css=.font-bold", "css:finder"],
+        ["xpath=//a/span", "xpath:position"],
+        ["xpath=//span[contains(.,'Rappi')]", "xpath:innerText"]
+      ],
+      "value": "1200000"
+    }, {
+      "id": "0cbeb82a-b6b4-46a7-bf3f-e4a0634d4587",
+      "comment": "",
+      "command": "click",
+      "target": "css=.bg-card:nth-child(2) > .p-4 .font-semibold",
+      "targets": [
+        ["css=.bg-card:nth-child(2) > .p-4 .font-semibold", "css:finder"],
+        ["xpath=//div[@id='radix-«r0»-content-restaurants']/div/div[2]/div[2]/div/div/div[2]/h3", "xpath:idRelative"],
+        ["xpath=//div[2]/div/div/div[2]/h3", "xpath:position"],
+        ["xpath=//h3[contains(.,'Fast Food Heaven')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "304d211c-85ec-42a4-836d-7f0cf09c97d9",
+      "comment": "",
+      "command": "click",
+      "target": "css=.bg-card:nth-child(2) .inline-flex",
+      "targets": [
+        ["css=.bg-card:nth-child(2) .inline-flex", "css:finder"],
+        ["xpath=//div[@id='radix-«r0»-content-products']/div/div[3]/div[2]/div/div/div[2]/div/button", "xpath:idRelative"],
+        ["xpath=//div[2]/div/div/div[2]/div/button", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "291edc77-086b-4335-b51c-ae0260395453",
+      "comment": "",
+      "command": "click",
+      "target": "css=.justify-between > .rounded-md",
+      "targets": [
+        ["css=.justify-between > .rounded-md", "css:finder"],
+        ["xpath=//div[@id='radix-«r0»-content-products']/div/div/button", "xpath:idRelative"],
+        ["xpath=//div[3]/div[2]/div/div/button", "xpath:position"],
+        ["xpath=//button[contains(.,'1 items • $11.50')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "1641ad3e-10f9-4e33-afd3-d57124688340",
+      "comment": "",
+      "command": "click",
+      "target": "css=.inline-flex:nth-child(2)",
+      "targets": [
+        ["css=.inline-flex:nth-child(2)", "css:finder"],
+        ["xpath=//div[@id='radix-«r0»-content-cart']/div/div[3]/div/div/div/button", "xpath:idRelative"],
+        ["xpath=//div[3]/div/div[3]/div/div/div/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Aplicar')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "3911ded4-162a-4f40-beba-3f8815315199",
+      "comment": "",
+      "command": "click",
+      "target": "css=.bg-primary:nth-child(1)",
+      "targets": [
+        ["css=.bg-primary:nth-child(1)", "css:finder"],
+        ["xpath=//div[@id='radix-«r0»-content-cart']/div/div[4]/div[3]/button", "xpath:idRelative"],
+        ["xpath=//div[4]/div[3]/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Continuar con la dirección')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "f052b1e6-24e5-4787-9a1d-167e93b84226",
+      "comment": "",
+      "command": "assertElementNotPresent",
+      "target": "css=.text-green-600:nth-child(3)",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "e81539dd-eaf7-4c51-bdf2-4e45cfe5da52",
+      "comment": "",
+      "command": "assertText",
+      "target": "css=.font-bold:nth-child(2)",
+      "targets": [
+        ["css=.font-bold:nth-child(2)", "css:finder"],
+        ["xpath=//div[@id='radix-«r0»-content-address']/div/div/h2", "xpath:idRelative"],
+        ["xpath=//div/div/h2", "xpath:position"],
+        ["xpath=//h2[contains(.,'Selecciona una dirección')]", "xpath:innerText"]
+      ],
+      "value": "Selecciona una dirección"
+    }, {
+      "id": "5084a61e-4de1-4c62-a9cc-a9f3d1b74e62",
+      "comment": "",
+      "command": "click",
+      "target": "css=.cursor-pointer:nth-child(3)",
+      "targets": [
+        ["css=.cursor-pointer:nth-child(3)", "css:finder"],
+        ["xpath=//div[@id='radix-«rb»-content-address']/div/div[2]/div[3]", "xpath:idRelative"],
+        ["xpath=//div[2]/div[3]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "ba93f3ce-d3c1-4c42-afdf-ada176226c94",
+      "comment": "",
+      "command": "click",
+      "target": "css=.hover\\3A bg-primary\\/90",
+      "targets": [
+        ["css=.hover\\3A bg-primary\\/90", "css:finder"],
+        ["xpath=//div[@id='radix-«rb»-content-address']/div/div[3]/div/button", "xpath:idRelative"],
+        ["xpath=//div[3]/div/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Continuar con el pago')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "0b009452-b8df-4acd-8d30-88d2319cca3a",
+      "comment": "",
+      "command": "assertText",
+      "target": "css=.font-bold:nth-child(2)",
+      "targets": [
+        ["css=.font-bold:nth-child(2)", "css:finder"],
+        ["xpath=//div[@id='radix-«rb»-content-payment']/div/div/h2", "xpath:idRelative"],
+        ["xpath=//div/div/h2", "xpath:position"],
+        ["xpath=//h2[contains(.,'Selecciona un método de pago')]", "xpath:innerText"]
+      ],
+      "value": "Selecciona un método de pago"
+    }]
+  }, {
+    "id": "d22a2603-642a-4d04-be57-873f226df540",
+    "name": "R7 - Pago - código válido",
+    "commands": [{
+      "id": "9f3c8ce7-40cb-46d0-a37f-9b3f58507f4b",
+      "comment": "",
+      "command": "open",
+      "target": "https://rappi-payment.onrender.com/payment",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "0817d289-9475-4313-97a5-b890aba124e8",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1280x720",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "6e52b17a-48d8-477f-b2a7-e884bb2134f4",
+      "comment": "",
+      "command": "waitForElementPresent",
+      "target": "css=.font-bold",
+      "targets": [
+        ["css=.font-bold", "css:finder"],
+        ["xpath=//a/span", "xpath:position"],
+        ["xpath=//span[contains(.,'Rappi')]", "xpath:innerText"]
+      ],
+      "value": "1200000"
+    }, {
+      "id": "bea240d9-21c2-4657-b452-8277986df59d",
+      "comment": "",
+      "command": "click",
+      "target": "css=.bg-card:nth-child(2) > .p-4 .font-semibold",
+      "targets": [
+        ["css=.bg-card:nth-child(2) > .p-4 .font-semibold", "css:finder"],
+        ["xpath=//div[@id='radix-«r0»-content-restaurants']/div/div[2]/div[2]/div/div/div[2]/h3", "xpath:idRelative"],
+        ["xpath=//div[2]/div/div/div[2]/h3", "xpath:position"],
+        ["xpath=//h3[contains(.,'Fast Food Heaven')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "413bdee2-aa6c-4e9b-ad54-dd11e67b5764",
+      "comment": "",
+      "command": "click",
+      "target": "css=.bg-card:nth-child(2) .inline-flex",
+      "targets": [
+        ["css=.bg-card:nth-child(2) .inline-flex", "css:finder"],
+        ["xpath=//div[@id='radix-«r0»-content-products']/div/div[3]/div[2]/div/div/div[2]/div/button", "xpath:idRelative"],
+        ["xpath=//div[2]/div/div/div[2]/div/button", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "3c01fe87-97d2-401c-80e8-5e600e535778",
+      "comment": "",
+      "command": "click",
+      "target": "css=.justify-between > .rounded-md",
+      "targets": [
+        ["css=.justify-between > .rounded-md", "css:finder"],
+        ["xpath=//div[@id='radix-«r0»-content-products']/div/div/button", "xpath:idRelative"],
+        ["xpath=//div[3]/div[2]/div/div/button", "xpath:position"],
+        ["xpath=//button[contains(.,'1 items • $11.50')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "b1487b9a-afcc-4313-83d6-a712c41f84e6",
+      "comment": "",
+      "command": "type",
+      "target": "id=promo-code",
+      "targets": [
+        ["id=promo-code", "id"],
+        ["css=#promo-code", "css:finder"],
+        ["xpath=//input[@id='promo-code']", "xpath:attributes"],
+        ["xpath=//div[@id='radix-«rb»-content-cart']/div/div[3]/div/div/div/div/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "RAPPI10"
+    }, {
+      "id": "209a243a-f0f2-4b49-8bdc-226c86d2a033",
+      "comment": "",
+      "command": "click",
+      "target": "css=.inline-flex:nth-child(2)",
+      "targets": [
+        ["css=.inline-flex:nth-child(2)", "css:finder"],
+        ["xpath=//div[@id='radix-«rb»-content-cart']/div/div[3]/div/div/div/button", "xpath:idRelative"],
+        ["xpath=//div[3]/div/div[3]/div/div/div/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Aplicar')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "673ad88f-7bbe-408a-a0cc-d242dcbc44eb",
+      "comment": "",
+      "command": "assertElementPresent",
+      "target": "css=.text-green-600:nth-child(3)",
+      "targets": [
+        ["css=.text-green-600:nth-child(3)", "css:finder"],
+        ["xpath=//div[@id='radix-«rb»-content-cart']/div/div[3]/div/div/p", "xpath:idRelative"],
+        ["xpath=//div[3]/div/div/p", "xpath:position"],
+        ["xpath=//p[contains(.,'Descuento aplicado')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "9c25b11e-b4fd-4503-9839-db29b509ab9c",
+      "comment": "",
+      "command": "click",
+      "target": "css=.bg-primary:nth-child(1)",
+      "targets": [
+        ["css=.bg-primary:nth-child(1)", "css:finder"],
+        ["xpath=//div[@id='radix-«r0»-content-cart']/div/div[4]/div[3]/button", "xpath:idRelative"],
+        ["xpath=//div[4]/div[3]/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Continuar con la dirección')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "0f80dc55-4186-4f97-971a-b639ac541c83",
+      "comment": "",
+      "command": "assertElementNotPresent",
+      "target": "css=.text-green-600:nth-child(3)",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "ffb4efcb-8325-464d-af30-a22c4b245510",
+      "comment": "",
+      "command": "assertText",
+      "target": "css=.font-bold:nth-child(2)",
+      "targets": [
+        ["css=.font-bold:nth-child(2)", "css:finder"],
+        ["xpath=//div[@id='radix-«r0»-content-address']/div/div/h2", "xpath:idRelative"],
+        ["xpath=//div/div/h2", "xpath:position"],
+        ["xpath=//h2[contains(.,'Selecciona una dirección')]", "xpath:innerText"]
+      ],
+      "value": "Selecciona una dirección"
+    }, {
+      "id": "afb532d7-3fd4-4747-a344-538ddac2de2c",
+      "comment": "",
+      "command": "click",
+      "target": "css=.cursor-pointer:nth-child(3)",
+      "targets": [
+        ["css=.cursor-pointer:nth-child(3)", "css:finder"],
+        ["xpath=//div[@id='radix-«rb»-content-address']/div/div[2]/div[3]", "xpath:idRelative"],
+        ["xpath=//div[2]/div[3]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "15ba6bed-887e-4fad-881f-7a1ab0c5caec",
+      "comment": "",
+      "command": "click",
+      "target": "css=.hover\\3A bg-primary\\/90",
+      "targets": [
+        ["css=.hover\\3A bg-primary\\/90", "css:finder"],
+        ["xpath=//div[@id='radix-«rb»-content-address']/div/div[3]/div/button", "xpath:idRelative"],
+        ["xpath=//div[3]/div/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Continuar con el pago')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "5f698ec7-c4cc-4994-a1ce-b7a7458d4863",
+      "comment": "",
+      "command": "assertText",
+      "target": "css=.font-bold:nth-child(2)",
+      "targets": [
+        ["css=.font-bold:nth-child(2)", "css:finder"],
+        ["xpath=//div[@id='radix-«rb»-content-payment']/div/div/h2", "xpath:idRelative"],
+        ["xpath=//div/div/h2", "xpath:position"],
+        ["xpath=//h2[contains(.,'Selecciona un método de pago')]", "xpath:innerText"]
+      ],
+      "value": "Selecciona un método de pago"
+    }, {
+      "id": "93b82ddc-ee13-4ef0-9ea1-8e6dbd23a2ed",
+      "comment": "",
+      "command": "click",
+      "target": "css=.cursor-pointer:nth-child(1)",
+      "targets": [
+        ["css=.cursor-pointer:nth-child(1)", "css:finder"],
+        ["xpath=//div[@id='radix-«r0»-content-payment']/div/div[3]/div", "xpath:idRelative"],
+        ["xpath=//div[5]/div/div[3]/div", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "0c8039b3-5328-4617-9911-d02ea33ee6f6",
+      "comment": "",
+      "command": "click",
+      "target": "css=.px-4",
+      "targets": [
+        ["css=.px-4", "css:finder"],
+        ["xpath=//div[@id='radix-«r0»-content-payment']/div/div[4]/div[2]/button", "xpath:idRelative"],
+        ["xpath=//div[2]/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Realizar pedido')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "17de7295-13a2-45bf-a676-3e8c2a805d68",
+      "comment": "",
+      "command": "waitForElementPresent",
+      "target": "css=.inline-flex:nth-child(4)",
+      "targets": [
+        ["css=.inline-flex:nth-child(4)", "css:finder"],
+        ["xpath=//div[@id='radix-«r0»-content-confirmation']/div/div/div/div/button", "xpath:idRelative"],
+        ["xpath=//div[6]/div/div/div/div/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Hacer un nuevo pedido')]", "xpath:innerText"]
+      ],
+      "value": "30000"
+    }]
+  }, {
+    "id": "1127b711-f91b-43d8-a442-7ccb3e1e43e4",
+    "name": "R5 - Pedido realizado - código válido",
+    "commands": [{
+      "id": "f728e647-a811-44dc-9220-2dd21b2f8118",
+      "comment": "",
+      "command": "open",
+      "target": "https://rappi-payment.onrender.com/payment",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "c77ffe1b-a59f-4d58-afe7-b2f3bdeb2595",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1280x720",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "37b8c63c-9850-47d8-a3f0-1bf611d8162b",
+      "comment": "",
+      "command": "waitForElementPresent",
+      "target": "css=.font-bold",
+      "targets": [
+        ["css=.font-bold", "css:finder"],
+        ["xpath=//a/span", "xpath:position"],
+        ["xpath=//span[contains(.,'Rappi')]", "xpath:innerText"]
+      ],
+      "value": "1200000"
+    }, {
+      "id": "431ec409-1d3c-4a81-9197-7c2bb158e1b1",
+      "comment": "",
+      "command": "click",
+      "target": "css=.bg-card:nth-child(2) > .p-4 .font-semibold",
+      "targets": [
+        ["css=.bg-card:nth-child(2) > .p-4 .font-semibold", "css:finder"],
+        ["xpath=//div[@id='radix-«r0»-content-restaurants']/div/div[2]/div[2]/div/div/div[2]/h3", "xpath:idRelative"],
+        ["xpath=//div[2]/div/div/div[2]/h3", "xpath:position"],
+        ["xpath=//h3[contains(.,'Fast Food Heaven')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "09ba9c0f-6fcb-4e00-9625-f4dd1f002d9f",
+      "comment": "",
+      "command": "click",
+      "target": "css=.bg-card:nth-child(2) .inline-flex",
+      "targets": [
+        ["css=.bg-card:nth-child(2) .inline-flex", "css:finder"],
+        ["xpath=//div[@id='radix-«r0»-content-products']/div/div[3]/div[2]/div/div/div[2]/div/button", "xpath:idRelative"],
+        ["xpath=//div[2]/div/div/div[2]/div/button", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "6dfbb56f-7fa9-449f-9abf-5e8773fb4723",
+      "comment": "",
+      "command": "click",
+      "target": "css=.justify-between > .rounded-md",
+      "targets": [
+        ["css=.justify-between > .rounded-md", "css:finder"],
+        ["xpath=//div[@id='radix-«r0»-content-products']/div/div/button", "xpath:idRelative"],
+        ["xpath=//div[3]/div[2]/div/div/button", "xpath:position"],
+        ["xpath=//button[contains(.,'1 items • $11.50')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "93a67137-9ec9-49d7-8546-793a28cc09b0",
+      "comment": "",
+      "command": "type",
+      "target": "id=promo-code",
+      "targets": [
+        ["id=promo-code", "id"],
+        ["css=#promo-code", "css:finder"],
+        ["xpath=//input[@id='promo-code']", "xpath:attributes"],
+        ["xpath=//div[@id='radix-«rb»-content-cart']/div/div[3]/div/div/div/div/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "RAPPI10"
+    }, {
+      "id": "5db8e7a5-8962-453f-b835-9d67ae8dcbcc",
+      "comment": "",
+      "command": "click",
+      "target": "css=.inline-flex:nth-child(2)",
+      "targets": [
+        ["css=.inline-flex:nth-child(2)", "css:finder"],
+        ["xpath=//div[@id='radix-«rb»-content-cart']/div/div[3]/div/div/div/button", "xpath:idRelative"],
+        ["xpath=//div[3]/div/div[3]/div/div/div/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Aplicar')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "4a458062-eef4-4f55-ae2e-e19a3ddea81f",
+      "comment": "",
+      "command": "assertElementPresent",
+      "target": "css=.text-green-600:nth-child(3)",
+      "targets": [
+        ["css=.text-green-600:nth-child(3)", "css:finder"],
+        ["xpath=//div[@id='radix-«rb»-content-cart']/div/div[3]/div/div/p", "xpath:idRelative"],
+        ["xpath=//div[3]/div/div/p", "xpath:position"],
+        ["xpath=//p[contains(.,'Descuento aplicado')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "1edc12c2-0fab-4ed4-b5f2-3e43ee6d9cbc",
+      "comment": "",
+      "command": "click",
+      "target": "css=.bg-primary:nth-child(1)",
+      "targets": [
+        ["css=.bg-primary:nth-child(1)", "css:finder"],
+        ["xpath=//div[@id='radix-«r0»-content-cart']/div/div[4]/div[3]/button", "xpath:idRelative"],
+        ["xpath=//div[4]/div[3]/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Continuar con la dirección')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "eda46fc5-5b22-4008-95dc-bd347db18312",
+      "comment": "",
+      "command": "assertElementNotPresent",
+      "target": "css=.text-green-600:nth-child(3)",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "849ed711-38af-4ffe-a497-ec92b8c7e78e",
+      "comment": "",
+      "command": "assertText",
+      "target": "css=.font-bold:nth-child(2)",
+      "targets": [
+        ["css=.font-bold:nth-child(2)", "css:finder"],
+        ["xpath=//div[@id='radix-«r0»-content-address']/div/div/h2", "xpath:idRelative"],
+        ["xpath=//div/div/h2", "xpath:position"],
+        ["xpath=//h2[contains(.,'Selecciona una dirección')]", "xpath:innerText"]
+      ],
+      "value": "Selecciona una dirección"
+    }, {
+      "id": "c4004b9b-792f-4d86-8b26-8ef83f1e704d",
+      "comment": "",
+      "command": "click",
+      "target": "css=.cursor-pointer:nth-child(3)",
+      "targets": [
+        ["css=.cursor-pointer:nth-child(3)", "css:finder"],
+        ["xpath=//div[@id='radix-«rb»-content-address']/div/div[2]/div[3]", "xpath:idRelative"],
+        ["xpath=//div[2]/div[3]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "5cd7e8f7-c111-4b4f-b0fb-13b04a233b0b",
+      "comment": "",
+      "command": "click",
+      "target": "css=.hover\\3A bg-primary\\/90",
+      "targets": [
+        ["css=.hover\\3A bg-primary\\/90", "css:finder"],
+        ["xpath=//div[@id='radix-«rb»-content-address']/div/div[3]/div/button", "xpath:idRelative"],
+        ["xpath=//div[3]/div/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Continuar con el pago')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "17a6fc6e-67c4-419b-9f4c-6ec1c3107c16",
+      "comment": "",
+      "command": "assertText",
+      "target": "css=.font-bold:nth-child(2)",
+      "targets": [
+        ["css=.font-bold:nth-child(2)", "css:finder"],
+        ["xpath=//div[@id='radix-«rb»-content-payment']/div/div/h2", "xpath:idRelative"],
+        ["xpath=//div/div/h2", "xpath:position"],
+        ["xpath=//h2[contains(.,'Selecciona un método de pago')]", "xpath:innerText"]
+      ],
+      "value": "Selecciona un método de pago"
+    }, {
+      "id": "e9aaf044-ed51-4f39-beaa-678cc952944b",
+      "comment": "",
+      "command": "click",
+      "target": "css=.cursor-pointer:nth-child(1)",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "7131175e-55e6-4121-9247-998e486f0412",
+      "comment": "",
+      "command": "click",
+      "target": "css=.px-4",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "a4b8c9bb-adea-4579-9611-8dc107787a15",
+      "comment": "",
+      "command": "waitForElementPresent",
+      "target": "css=.inline-flex:nth-child(4)",
+      "targets": [],
+      "value": "30000"
+    }]
+  }, {
+    "id": "caee3878-8a90-4baa-976e-44ba3930ffa1",
+    "name": "R4 - Pedido realizado - código inválido",
+    "commands": [{
+      "id": "94aef2a8-b6ed-4368-8422-b8444204c2d8",
+      "comment": "",
+      "command": "open",
+      "target": "https://rappi-payment.onrender.com/payment",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "3998d3ac-64d8-4239-b6a3-a900ef975840",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1280x720",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "97f57632-828d-4589-bd8f-16909efd7430",
+      "comment": "",
+      "command": "waitForElementPresent",
+      "target": "css=.font-bold",
+      "targets": [
+        ["css=.font-bold", "css:finder"],
+        ["xpath=//a/span", "xpath:position"],
+        ["xpath=//span[contains(.,'Rappi')]", "xpath:innerText"]
+      ],
+      "value": "1200000"
+    }, {
+      "id": "308a1ce7-6e79-4428-a2e3-56be774faecb",
+      "comment": "",
+      "command": "click",
+      "target": "css=.bg-card:nth-child(2) > .p-4 .font-semibold",
+      "targets": [
+        ["css=.bg-card:nth-child(2) > .p-4 .font-semibold", "css:finder"],
+        ["xpath=//div[@id='radix-«r0»-content-restaurants']/div/div[2]/div[2]/div/div/div[2]/h3", "xpath:idRelative"],
+        ["xpath=//div[2]/div/div/div[2]/h3", "xpath:position"],
+        ["xpath=//h3[contains(.,'Fast Food Heaven')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "424e6cf2-8faf-4103-9947-32808fd1ad91",
+      "comment": "",
+      "command": "click",
+      "target": "css=.bg-card:nth-child(2) .inline-flex",
+      "targets": [
+        ["css=.bg-card:nth-child(2) .inline-flex", "css:finder"],
+        ["xpath=//div[@id='radix-«r0»-content-products']/div/div[3]/div[2]/div/div/div[2]/div/button", "xpath:idRelative"],
+        ["xpath=//div[2]/div/div/div[2]/div/button", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "3c3c034b-fbe9-446d-a67b-18bb1a115cfc",
+      "comment": "",
+      "command": "click",
+      "target": "css=.justify-between > .rounded-md",
+      "targets": [
+        ["css=.justify-between > .rounded-md", "css:finder"],
+        ["xpath=//div[@id='radix-«r0»-content-products']/div/div/button", "xpath:idRelative"],
+        ["xpath=//div[3]/div[2]/div/div/button", "xpath:position"],
+        ["xpath=//button[contains(.,'1 items • $11.50')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "af3d20f1-72c6-407a-9762-b9a89f16f6ed",
+      "comment": "",
+      "command": "click",
+      "target": "css=.inline-flex:nth-child(2)",
+      "targets": [
+        ["css=.inline-flex:nth-child(2)", "css:finder"],
+        ["xpath=//div[@id='radix-«r0»-content-cart']/div/div[3]/div/div/div/button", "xpath:idRelative"],
+        ["xpath=//div[3]/div/div[3]/div/div/div/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Aplicar')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "44195f2a-d1f5-434e-bce3-17573b62a6f1",
+      "comment": "",
+      "command": "click",
+      "target": "css=.bg-primary:nth-child(1)",
+      "targets": [
+        ["css=.bg-primary:nth-child(1)", "css:finder"],
+        ["xpath=//div[@id='radix-«r0»-content-cart']/div/div[4]/div[3]/button", "xpath:idRelative"],
+        ["xpath=//div[4]/div[3]/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Continuar con la dirección')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "6006179b-3bb4-4db9-961f-fdc09c7ba46a",
+      "comment": "",
+      "command": "assertElementNotPresent",
+      "target": "css=.text-green-600:nth-child(3)",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "22e0f9dd-875a-4518-b974-eac6fed94051",
+      "comment": "",
+      "command": "assertText",
+      "target": "css=.font-bold:nth-child(2)",
+      "targets": [
+        ["css=.font-bold:nth-child(2)", "css:finder"],
+        ["xpath=//div[@id='radix-«r0»-content-address']/div/div/h2", "xpath:idRelative"],
+        ["xpath=//div/div/h2", "xpath:position"],
+        ["xpath=//h2[contains(.,'Selecciona una dirección')]", "xpath:innerText"]
+      ],
+      "value": "Selecciona una dirección"
+    }, {
+      "id": "2abc7984-d30c-4e21-8fce-c90747341daa",
+      "comment": "",
+      "command": "click",
+      "target": "css=.cursor-pointer:nth-child(3)",
+      "targets": [
+        ["css=.cursor-pointer:nth-child(3)", "css:finder"],
+        ["xpath=//div[@id='radix-«rb»-content-address']/div/div[2]/div[3]", "xpath:idRelative"],
+        ["xpath=//div[2]/div[3]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "aa60dc2c-790e-4503-93a8-c0ee8e878a3a",
+      "comment": "",
+      "command": "click",
+      "target": "css=.hover\\3A bg-primary\\/90",
+      "targets": [
+        ["css=.hover\\3A bg-primary\\/90", "css:finder"],
+        ["xpath=//div[@id='radix-«rb»-content-address']/div/div[3]/div/button", "xpath:idRelative"],
+        ["xpath=//div[3]/div/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Continuar con el pago')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "1e8dea64-1b49-480b-8b90-7ddc95b24ad9",
+      "comment": "",
+      "command": "assertText",
+      "target": "css=.font-bold:nth-child(2)",
+      "targets": [
+        ["css=.font-bold:nth-child(2)", "css:finder"],
+        ["xpath=//div[@id='radix-«rb»-content-payment']/div/div/h2", "xpath:idRelative"],
+        ["xpath=//div/div/h2", "xpath:position"],
+        ["xpath=//h2[contains(.,'Selecciona un método de pago')]", "xpath:innerText"]
+      ],
+      "value": "Selecciona un método de pago"
+    }, {
+      "id": "a48d4c7c-8baa-4f07-9db5-8cfb23d19f37",
+      "comment": "",
+      "command": "click",
+      "target": "css=.cursor-pointer:nth-child(1)",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "f40217e5-357c-45e3-b320-1ca040b0cc34",
+      "comment": "",
+      "command": "click",
+      "target": "css=.px-4",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "187c7b55-a8b8-4299-aab6-577af20155d5",
+      "comment": "",
+      "command": "waitForElementPresent",
+      "target": "css=.inline-flex:nth-child(4)",
+      "targets": [],
+      "value": "30000"
+    }]
+  }, {
+    "id": "48064744-eadd-4f3a-9d95-59fb639739f7",
+    "name": "R1 - Código válido - envío local - usuario nuevo",
+    "commands": [{
+      "id": "4cad32ee-bc4d-4121-91f5-aa486af953e8",
+      "comment": "",
+      "command": "open",
+      "target": "https://rappi-payment.onrender.com/payment",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "ea5ea2f0-cf03-439f-8343-5e44f8e08882",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1280x720",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "d6315d89-c015-4412-8932-471a7471602f",
+      "comment": "",
+      "command": "waitForElementPresent",
+      "target": "css=.font-bold",
+      "targets": [
+        ["css=.font-bold", "css:finder"],
+        ["xpath=//a/span", "xpath:position"],
+        ["xpath=//span[contains(.,'Rappi')]", "xpath:innerText"]
+      ],
+      "value": "1200000"
+    }, {
+      "id": "a1eded81-2dfd-413f-8548-13264cbfdec7",
+      "comment": "",
+      "command": "click",
+      "target": "css=.bg-card:nth-child(2) > .p-4 .font-semibold",
+      "targets": [
+        ["css=.bg-card:nth-child(2) > .p-4 .font-semibold", "css:finder"],
+        ["xpath=//div[@id='radix-«r0»-content-restaurants']/div/div[2]/div[2]/div/div/div[2]/h3", "xpath:idRelative"],
+        ["xpath=//div[2]/div/div/div[2]/h3", "xpath:position"],
+        ["xpath=//h3[contains(.,'Fast Food Heaven')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "2114415e-92f3-428f-81fb-b39af4cc407e",
+      "comment": "",
+      "command": "click",
+      "target": "css=.bg-card:nth-child(2) .inline-flex",
+      "targets": [
+        ["css=.bg-card:nth-child(2) .inline-flex", "css:finder"],
+        ["xpath=//div[@id='radix-«r0»-content-products']/div/div[3]/div[2]/div/div/div[2]/div/button", "xpath:idRelative"],
+        ["xpath=//div[2]/div/div/div[2]/div/button", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "548c6102-97e8-4205-a448-c5b7f17c5ead",
+      "comment": "",
+      "command": "click",
+      "target": "css=.justify-between > .rounded-md",
+      "targets": [
+        ["css=.justify-between > .rounded-md", "css:finder"],
+        ["xpath=//div[@id='radix-«r0»-content-products']/div/div/button", "xpath:idRelative"],
+        ["xpath=//div[3]/div[2]/div/div/button", "xpath:position"],
+        ["xpath=//button[contains(.,'1 items • $11.50')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "c3d7bc84-09bd-41de-8480-5a3195070125",
+      "comment": "",
+      "command": "assertElementPresent",
+      "target": "css=.flex-1 > .font-medium",
+      "targets": [
+        ["css=.flex-1 > .font-medium", "css:finder"],
+        ["xpath=//div[@id='radix-«r0»-content-cart']/div/div[2]/div/div/div[2]/h3", "xpath:idRelative"],
+        ["xpath=//h3", "xpath:position"],
+        ["xpath=//h3[contains(.,'Hamburguesa Doble')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "c94a1d33-2f40-4dd7-b596-bc8ae6d4b5d2",
+      "comment": "",
+      "command": "type",
+      "target": "id=promo-code",
+      "targets": [
+        ["id=promo-code", "id"],
+        ["css=#promo-code", "css:finder"],
+        ["xpath=//input[@id='promo-code']", "xpath:attributes"],
+        ["xpath=//div[@id='radix-«r0»-content-cart']/div/div[3]/div/div/div/div/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "RAPPI10"
+    }, {
+      "id": "e50722fb-aa43-45ea-83ef-793fdc9b47ff",
+      "comment": "",
+      "command": "click",
+      "target": "css=.inline-flex:nth-child(2)",
+      "targets": [
+        ["css=.inline-flex:nth-child(2)", "css:finder"],
+        ["xpath=//div[@id='radix-«r0»-content-cart']/div/div[3]/div/div/div/button", "xpath:idRelative"],
+        ["xpath=//div[3]/div/div[3]/div/div/div/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Aplicar')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "8b9198f5-d5ed-4eee-a888-e710a920c1ae",
+      "comment": "",
+      "command": "assertElementPresent",
+      "target": "css=.text-green-600:nth-child(3)",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "20283317-d7ff-49f1-aeb3-f28c2d97e4d8",
+      "comment": "",
+      "command": "click",
+      "target": "css=.bg-primary:nth-child(1)",
+      "targets": [
+        ["css=.bg-primary:nth-child(1)", "css:finder"],
+        ["xpath=//div[@id='radix-«r0»-content-cart']/div/div[4]/div[3]/button", "xpath:idRelative"],
+        ["xpath=//div[4]/div[3]/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Continuar con la dirección')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "1e802f32-1ba7-4a21-b9f0-2e6d40dfa78c",
+      "comment": "",
+      "command": "click",
+      "target": "css=.cursor-pointer:nth-child(1)",
+      "targets": [
+        ["css=.cursor-pointer:nth-child(1)", "css:finder"],
+        ["xpath=//div[@id='radix-«r0»-content-address']/div/div[2]/div", "xpath:idRelative"],
+        ["xpath=//div[4]/div/div[2]/div", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "0817040a-e6cb-4f77-824a-879981125c4c",
+      "comment": "",
+      "command": "assertElementPresent",
+      "target": "css=.lucide:nth-child(2)",
+      "targets": [
+        ["css=.lucide:nth-child(2)", "css:finder"]
+      ],
+      "value": ""
+    }, {
+      "id": "5a4de61b-1ca5-4535-8161-09b568eef329",
+      "comment": "",
+      "command": "click",
+      "target": "css=.hover\\3A bg-primary\\/90",
+      "targets": [
+        ["css=.hover\\3A bg-primary\\/90", "css:finder"],
+        ["xpath=//div[@id='radix-«r0»-content-address']/div/div[3]/div/button", "xpath:idRelative"],
+        ["xpath=//div[3]/div/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Continuar con el pago')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "a2958116-b21f-41f7-bf28-df870ac43015",
+      "comment": "",
+      "command": "click",
+      "target": "css=.px-3:nth-child(1)",
+      "targets": [
+        ["css=.px-3:nth-child(1)", "css:finder"],
+        ["xpath=//div[@id='radix-«r0»-content-payment']/div/div[2]/div/button", "xpath:idRelative"],
+        ["xpath=//div[2]/div/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Usuario nuevo')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "f1474f4c-aeb4-4006-a61a-f43a3ba59104",
+      "comment": "",
+      "command": "assertText",
+      "target": "css=.text-green-600:nth-child(2)",
+      "targets": [
+        ["css=.text-green-600:nth-child(2)", "css:finder"],
+        ["xpath=//div[@id='radix-«rb»-content-payment']/div/div[4]/div/div/div[2]/span[2]", "xpath:idRelative"],
+        ["xpath=//div[2]/span[2]", "xpath:position"],
+        ["xpath=//span[contains(.,'-$2.00')]", "xpath:innerText"]
+      ],
+      "value": "-$3.15"
+    }, {
+      "id": "b9f40e3c-e397-429f-bab0-b4c5dbe03162",
+      "comment": "",
+      "command": "click",
+      "target": "css=.bg-card:nth-child(3) > .p-4",
+      "targets": [
+        ["css=.bg-card:nth-child(3) > .p-4", "css:finder"],
+        ["xpath=//div[@id='radix-«r0»-content-payment']/div/div[3]/div[3]/div", "xpath:idRelative"],
+        ["xpath=//div[3]/div[3]/div", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "450176a1-0111-4f4c-8db6-c2985e4806ad",
+      "comment": "",
+      "command": "click",
+      "target": "css=.px-4",
+      "targets": [
+        ["css=.px-4", "css:finder"],
+        ["xpath=//div[@id='radix-«r0»-content-payment']/div/div[4]/div[2]/button", "xpath:idRelative"],
+        ["xpath=//div[2]/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Realizar pedido')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "1eb975da-2115-467c-ba2f-c1470b053315",
+      "comment": "",
+      "command": "assertText",
+      "target": "css=.justify-between:nth-child(3) > span:nth-child(2)",
+      "targets": [
+        ["css=.justify-between:nth-child(3) > span:nth-child(2)", "css:finder"],
+        ["xpath=//div[@id='radix-«r0»-content-confirmation']/div/div[2]/div/div[7]/div[3]/span[2]", "xpath:idRelative"],
+        ["xpath=//div[3]/span[2]", "xpath:position"],
+        ["xpath=//span[contains(.,'$2.50')]", "xpath:innerText"]
+      ],
+      "value": "$2.50"
+    }, {
+      "id": "4bbf2bd5-851e-4a12-9814-cfe9308fb564",
+      "comment": "",
+      "command": "waitForElementPresent",
+      "target": "css=.inline-flex:nth-child(4)",
+      "targets": [],
+      "value": "30000"
+    }]
+  }, {
+    "id": "0ae75c61-7848-4ff7-8856-77d0993d1322",
+    "name": "R10 - Código inválido - envío local - usuario nuevo",
+    "commands": [{
+      "id": "07f80873-c498-4a0f-8bd2-9cf6a21b771e",
+      "comment": "",
+      "command": "open",
+      "target": "https://rappi-payment.onrender.com/payment",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "01c98fd8-3220-47f4-bb1e-616b5898c3af",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1280x720",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "e55dcd3c-40d8-4362-bff1-d4efb7b8ebb9",
+      "comment": "",
+      "command": "waitForElementPresent",
+      "target": "css=.font-bold",
+      "targets": [
+        ["css=.font-bold", "css:finder"],
+        ["xpath=//a/span", "xpath:position"],
+        ["xpath=//span[contains(.,'Rappi')]", "xpath:innerText"]
+      ],
+      "value": "1200000"
+    }, {
+      "id": "3979cdf6-3707-4572-80a3-86079e24b0cf",
+      "comment": "",
+      "command": "click",
+      "target": "css=.bg-card:nth-child(2) > .p-4 .font-semibold",
+      "targets": [
+        ["css=.bg-card:nth-child(2) > .p-4 .font-semibold", "css:finder"],
+        ["xpath=//div[@id='radix-«r0»-content-restaurants']/div/div[2]/div[2]/div/div/div[2]/h3", "xpath:idRelative"],
+        ["xpath=//div[2]/div/div/div[2]/h3", "xpath:position"],
+        ["xpath=//h3[contains(.,'Fast Food Heaven')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "6de81dd7-1269-43de-9754-10969d00f9b4",
+      "comment": "",
+      "command": "click",
+      "target": "css=.bg-card:nth-child(2) .inline-flex",
+      "targets": [
+        ["css=.bg-card:nth-child(2) .inline-flex", "css:finder"],
+        ["xpath=//div[@id='radix-«r0»-content-products']/div/div[3]/div[2]/div/div/div[2]/div/button", "xpath:idRelative"],
+        ["xpath=//div[2]/div/div/div[2]/div/button", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "5a1546bc-e664-45e0-9432-040dafe72a25",
+      "comment": "",
+      "command": "click",
+      "target": "css=.justify-between > .rounded-md",
+      "targets": [
+        ["css=.justify-between > .rounded-md", "css:finder"],
+        ["xpath=//div[@id='radix-«r0»-content-products']/div/div/button", "xpath:idRelative"],
+        ["xpath=//div[3]/div[2]/div/div/button", "xpath:position"],
+        ["xpath=//button[contains(.,'1 items • $11.50')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "3918ff0f-6c8d-4eac-9e9d-5aa408461373",
+      "comment": "",
+      "command": "assertElementPresent",
+      "target": "css=.flex-1 > .font-medium",
+      "targets": [
+        ["css=.flex-1 > .font-medium", "css:finder"],
+        ["xpath=//div[@id='radix-«r0»-content-cart']/div/div[2]/div/div/div[2]/h3", "xpath:idRelative"],
+        ["xpath=//h3", "xpath:position"],
+        ["xpath=//h3[contains(.,'Hamburguesa Doble')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "eb241fd7-eafa-409a-80b4-71d4acc23f09",
+      "comment": "",
+      "command": "assertElementNotPresent",
+      "target": "css=.text-green-600:nth-child(3)",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "54667f38-5f8e-4e74-acb0-91a060eb3082",
+      "comment": "",
+      "command": "click",
+      "target": "css=.bg-primary:nth-child(1)",
+      "targets": [
+        ["css=.bg-primary:nth-child(1)", "css:finder"],
+        ["xpath=//div[@id='radix-«r0»-content-cart']/div/div[4]/div[3]/button", "xpath:idRelative"],
+        ["xpath=//div[4]/div[3]/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Continuar con la dirección')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "77dca48c-0d15-41dc-9b2b-585d4ac5d98b",
+      "comment": "",
+      "command": "click",
+      "target": "css=.bg-card:nth-child(1) > .p-4 .text-muted-foreground:nth-child(2)",
+      "targets": [
+        ["css=.bg-card:nth-child(1) > .p-4 .text-muted-foreground:nth-child(2)", "css:finder"],
+        ["xpath=//div[@id='radix-«r0»-content-address']/div/div[2]/div/div/div/div[2]/p", "xpath:idRelative"],
+        ["xpath=//p", "xpath:position"],
+        ["xpath=//p[contains(.,'Calle Principal 123')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "666f0fa0-86a3-4d8d-aa55-a4c3d9a2badf",
+      "comment": "",
+      "command": "assertElementPresent",
+      "target": "css=.lucide:nth-child(2)",
+      "targets": [
+        ["css=.lucide:nth-child(2)", "css:finder"]
+      ],
+      "value": ""
+    }, {
+      "id": "979b8faf-6090-4e5c-bfc6-8bf74747361c",
+      "comment": "",
+      "command": "click",
+      "target": "css=.hover\\3A bg-primary\\/90",
+      "targets": [
+        ["css=.hover\\3A bg-primary\\/90", "css:finder"],
+        ["xpath=//div[@id='radix-«r0»-content-address']/div/div[3]/div/button", "xpath:idRelative"],
+        ["xpath=//div[3]/div/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Continuar con el pago')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "63c3efe9-c5a3-4729-a791-cab153abd730",
+      "comment": "",
+      "command": "click",
+      "target": "css=.px-3:nth-child(1)",
+      "targets": [
+        ["css=.px-3:nth-child(1)", "css:finder"],
+        ["xpath=//div[@id='radix-«r0»-content-payment']/div/div[2]/div/button", "xpath:idRelative"],
+        ["xpath=//div[2]/div/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Usuario nuevo')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "beefbeb9-ade0-40e1-836e-f8d8453d3fb1",
+      "comment": "",
+      "command": "assertText",
+      "target": "css=.text-green-600:nth-child(2)",
+      "targets": [
+        ["css=.text-green-600:nth-child(2)", "css:finder"],
+        ["xpath=//div[@id='radix-«rb»-content-payment']/div/div[4]/div/div/div[2]/span[2]", "xpath:idRelative"],
+        ["xpath=//div[2]/span[2]", "xpath:position"],
+        ["xpath=//span[contains(.,'-$2.00')]", "xpath:innerText"]
+      ],
+      "value": "-$2.00"
+    }, {
+      "id": "8b413143-a45c-487b-870e-e11c6a69d1a3",
+      "comment": "",
+      "command": "click",
+      "target": "css=.bg-card:nth-child(3) > .p-4",
+      "targets": [
+        ["css=.bg-card:nth-child(3) > .p-4", "css:finder"],
+        ["xpath=//div[@id='radix-«r0»-content-payment']/div/div[3]/div[3]/div", "xpath:idRelative"],
+        ["xpath=//div[3]/div[3]/div", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "c32fc956-1e87-4c47-bc86-755c2fb30b69",
+      "comment": "",
+      "command": "click",
+      "target": "css=.px-4",
+      "targets": [
+        ["css=.px-4", "css:finder"],
+        ["xpath=//div[@id='radix-«r0»-content-payment']/div/div[4]/div[2]/button", "xpath:idRelative"],
+        ["xpath=//div[2]/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Realizar pedido')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "0b1be0c8-e2a8-45cf-9fa8-b35ac05dcd73",
+      "comment": "",
+      "command": "assertText",
+      "target": "css=.justify-between:nth-child(3) > span:nth-child(2)",
+      "targets": [
+        ["css=.justify-between:nth-child(3) > span:nth-child(2)", "css:finder"],
+        ["xpath=//div[@id='radix-«r0»-content-confirmation']/div/div[2]/div/div[7]/div[3]/span[2]", "xpath:idRelative"],
+        ["xpath=//div[3]/span[2]", "xpath:position"],
+        ["xpath=//span[contains(.,'$2.50')]", "xpath:innerText"]
+      ],
+      "value": "$2.50"
+    }, {
+      "id": "47f6e6c7-b88b-4384-8dbb-d8e502f47b82",
+      "comment": "",
+      "command": "waitForElementPresent",
+      "target": "css=.inline-flex:nth-child(4)",
+      "targets": [],
+      "value": "30000"
+    }]
+  }, {
+    "id": "9eb8939d-fb7d-446b-863e-ee211e677775",
+    "name": "R2 - Código válido - envío medio - usuario nuevo",
+    "commands": [{
+      "id": "25109ce0-8b0f-4f12-9460-8219b5633464",
+      "comment": "",
+      "command": "open",
+      "target": "https://rappi-payment.onrender.com/payment",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "f214d3b5-b9d1-4782-967d-387faed43258",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1280x720",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "3d5e603c-d792-4641-b3fb-130ddaf983ca",
+      "comment": "",
+      "command": "waitForElementPresent",
+      "target": "css=.font-bold",
+      "targets": [
+        ["css=.font-bold", "css:finder"],
+        ["xpath=//a/span", "xpath:position"],
+        ["xpath=//span[contains(.,'Rappi')]", "xpath:innerText"]
+      ],
+      "value": "1200000"
+    }, {
+      "id": "856ebd73-2516-4eca-ac20-27e441338439",
+      "comment": "",
+      "command": "click",
+      "target": "css=.bg-card:nth-child(2) > .p-4 .font-semibold",
+      "targets": [
+        ["css=.bg-card:nth-child(2) > .p-4 .font-semibold", "css:finder"],
+        ["xpath=//div[@id='radix-«r0»-content-restaurants']/div/div[2]/div[2]/div/div/div[2]/h3", "xpath:idRelative"],
+        ["xpath=//div[2]/div/div/div[2]/h3", "xpath:position"],
+        ["xpath=//h3[contains(.,'Fast Food Heaven')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "ae6437ce-b75a-47f9-8b01-56d4b875fb25",
+      "comment": "",
+      "command": "click",
+      "target": "css=.bg-card:nth-child(2) .inline-flex",
+      "targets": [
+        ["css=.bg-card:nth-child(2) .inline-flex", "css:finder"],
+        ["xpath=//div[@id='radix-«r0»-content-products']/div/div[3]/div[2]/div/div/div[2]/div/button", "xpath:idRelative"],
+        ["xpath=//div[2]/div/div/div[2]/div/button", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "90f94d9f-ee64-4cf2-950f-bd3d1e96a863",
+      "comment": "",
+      "command": "click",
+      "target": "css=.justify-between > .rounded-md",
+      "targets": [
+        ["css=.justify-between > .rounded-md", "css:finder"],
+        ["xpath=//div[@id='radix-«r0»-content-products']/div/div/button", "xpath:idRelative"],
+        ["xpath=//div[3]/div[2]/div/div/button", "xpath:position"],
+        ["xpath=//button[contains(.,'1 items • $11.50')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "6611b183-62dd-44b0-a43a-e199dbb95413",
+      "comment": "",
+      "command": "assertElementPresent",
+      "target": "css=.flex-1 > .font-medium",
+      "targets": [
+        ["css=.flex-1 > .font-medium", "css:finder"],
+        ["xpath=//div[@id='radix-«r0»-content-cart']/div/div[2]/div/div/div[2]/h3", "xpath:idRelative"],
+        ["xpath=//h3", "xpath:position"],
+        ["xpath=//h3[contains(.,'Hamburguesa Doble')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "8f8cff26-d2d9-40f1-af5f-3898afb8d413",
+      "comment": "",
+      "command": "type",
+      "target": "id=promo-code",
+      "targets": [
+        ["id=promo-code", "id"],
+        ["css=#promo-code", "css:finder"],
+        ["xpath=//input[@id='promo-code']", "xpath:attributes"],
+        ["xpath=//div[@id='radix-«r0»-content-cart']/div/div[3]/div/div/div/div/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "RAPPI10"
+    }, {
+      "id": "f90aaaa4-2bae-486f-b56a-5a650cb8546a",
+      "comment": "",
+      "command": "click",
+      "target": "css=.inline-flex:nth-child(2)",
+      "targets": [
+        ["css=.inline-flex:nth-child(2)", "css:finder"],
+        ["xpath=//div[@id='radix-«r0»-content-cart']/div/div[3]/div/div/div/button", "xpath:idRelative"],
+        ["xpath=//div[3]/div/div[3]/div/div/div/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Aplicar')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "f77278b8-a11d-439c-94e0-fbed0395588d",
+      "comment": "",
+      "command": "assertElementPresent",
+      "target": "css=.text-green-600:nth-child(3)",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "3bb71838-6de1-4467-a567-b09400b9cfb3",
+      "comment": "",
+      "command": "click",
+      "target": "css=.bg-primary:nth-child(1)",
+      "targets": [
+        ["css=.bg-primary:nth-child(1)", "css:finder"],
+        ["xpath=//div[@id='radix-«r0»-content-cart']/div/div[4]/div[3]/button", "xpath:idRelative"],
+        ["xpath=//div[4]/div[3]/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Continuar con la dirección')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "cab58a4f-703a-49e0-8d6d-50dc4336cd7e",
+      "comment": "",
+      "command": "click",
+      "target": "css=.rounded-xl:nth-child(2)",
+      "targets": [
+        ["css=.rounded-xl:nth-child(2)", "css:finder"],
+        ["xpath=//div[@id='radix-«r0»-content-address']/div/div[2]/div[2]", "xpath:idRelative"],
+        ["xpath=//div[2]/div[2]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "dd9a8cc3-3101-4f44-9c50-1685ab5a50c3",
+      "comment": "",
+      "command": "assertElementPresent",
+      "target": "css=.lucide:nth-child(2) > path:nth-child(1)",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "3d0a3de1-9f05-4060-a2de-f4c394c6ceaa",
+      "comment": "",
+      "command": "click",
+      "target": "css=.hover\\3A bg-primary\\/90",
+      "targets": [
+        ["css=.hover\\3A bg-primary\\/90", "css:finder"],
+        ["xpath=//div[@id='radix-«r0»-content-address']/div/div[3]/div/button", "xpath:idRelative"],
+        ["xpath=//div[3]/div/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Continuar con el pago')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "ec688fcd-f225-4896-be64-16c881a6144b",
+      "comment": "",
+      "command": "click",
+      "target": "css=.px-3:nth-child(1)",
+      "targets": [
+        ["css=.px-3:nth-child(1)", "css:finder"],
+        ["xpath=//div[@id='radix-«r0»-content-payment']/div/div[2]/div/button", "xpath:idRelative"],
+        ["xpath=//div[2]/div/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Usuario nuevo')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "54c575cf-72fd-4292-b645-e9f97da232a3",
+      "comment": "",
+      "command": "assertText",
+      "target": "css=.text-green-600:nth-child(2)",
+      "targets": [
+        ["css=.text-green-600:nth-child(2)", "css:finder"],
+        ["xpath=//div[@id='radix-«rb»-content-payment']/div/div[4]/div/div/div[2]/span[2]", "xpath:idRelative"],
+        ["xpath=//div[2]/span[2]", "xpath:position"],
+        ["xpath=//span[contains(.,'-$2.00')]", "xpath:innerText"]
+      ],
+      "value": "-$3.15"
+    }, {
+      "id": "832ea15d-12a5-4e29-8c92-08aaf67cf009",
+      "comment": "",
+      "command": "click",
+      "target": "css=.bg-card:nth-child(3) > .p-4",
+      "targets": [
+        ["css=.bg-card:nth-child(3) > .p-4", "css:finder"],
+        ["xpath=//div[@id='radix-«r0»-content-payment']/div/div[3]/div[3]/div", "xpath:idRelative"],
+        ["xpath=//div[3]/div[3]/div", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "dbc05ea2-23cc-419e-bfd5-178e2d2eb25d",
+      "comment": "",
+      "command": "click",
+      "target": "css=.px-4",
+      "targets": [
+        ["css=.px-4", "css:finder"],
+        ["xpath=//div[@id='radix-«r0»-content-payment']/div/div[4]/div[2]/button", "xpath:idRelative"],
+        ["xpath=//div[2]/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Realizar pedido')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "48e2d125-85bc-42f0-a3e1-b1848dc756a1",
+      "comment": "",
+      "command": "verifyText",
+      "target": "css=.justify-between:nth-child(3) > span:nth-child(2)",
+      "targets": [],
+      "value": "$4.00"
+    }, {
+      "id": "e37b825d-6ab6-4436-b68d-6d0141d0ec92",
+      "comment": "",
+      "command": "waitForElementPresent",
+      "target": "css=.inline-flex:nth-child(4)",
+      "targets": [],
+      "value": "30000"
+    }]
+  }, {
+    "id": "8dacac52-cc85-4090-b7c8-979c44a348e8",
+    "name": "R11 - Código inválido - envío medio - usuario nuevo",
+    "commands": [{
+      "id": "49fc320d-b635-4e05-96bc-09ac081dbcdc",
+      "comment": "",
+      "command": "open",
+      "target": "https://rappi-payment.onrender.com/payment",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "02338dc5-c8b6-41cf-833f-159ba91a6863",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1280x720",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "1971d0e9-7bdf-456d-97f6-2d3500c11cdb",
+      "comment": "",
+      "command": "waitForElementPresent",
+      "target": "css=.font-bold",
+      "targets": [
+        ["css=.font-bold", "css:finder"],
+        ["xpath=//a/span", "xpath:position"],
+        ["xpath=//span[contains(.,'Rappi')]", "xpath:innerText"]
+      ],
+      "value": "1200000"
+    }, {
+      "id": "83419174-96c3-4271-8da0-ad8e14533a64",
+      "comment": "",
+      "command": "click",
+      "target": "css=.bg-card:nth-child(2) > .p-4 .font-semibold",
+      "targets": [
+        ["css=.bg-card:nth-child(2) > .p-4 .font-semibold", "css:finder"],
+        ["xpath=//div[@id='radix-«r0»-content-restaurants']/div/div[2]/div[2]/div/div/div[2]/h3", "xpath:idRelative"],
+        ["xpath=//div[2]/div/div/div[2]/h3", "xpath:position"],
+        ["xpath=//h3[contains(.,'Fast Food Heaven')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "9e49e291-785e-4f59-9f74-d7dbe062781a",
+      "comment": "",
+      "command": "click",
+      "target": "css=.bg-card:nth-child(2) .inline-flex",
+      "targets": [
+        ["css=.bg-card:nth-child(2) .inline-flex", "css:finder"],
+        ["xpath=//div[@id='radix-«r0»-content-products']/div/div[3]/div[2]/div/div/div[2]/div/button", "xpath:idRelative"],
+        ["xpath=//div[2]/div/div/div[2]/div/button", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "461b193b-25f4-46ec-872c-175f23f4eaeb",
+      "comment": "",
+      "command": "click",
+      "target": "css=.justify-between > .rounded-md",
+      "targets": [
+        ["css=.justify-between > .rounded-md", "css:finder"],
+        ["xpath=//div[@id='radix-«r0»-content-products']/div/div/button", "xpath:idRelative"],
+        ["xpath=//div[3]/div[2]/div/div/button", "xpath:position"],
+        ["xpath=//button[contains(.,'1 items • $11.50')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "b94b6ed2-e6ad-47ce-b92c-50fc76c6e0ea",
+      "comment": "",
+      "command": "assertElementPresent",
+      "target": "css=.flex-1 > .font-medium",
+      "targets": [
+        ["css=.flex-1 > .font-medium", "css:finder"],
+        ["xpath=//div[@id='radix-«r0»-content-cart']/div/div[2]/div/div/div[2]/h3", "xpath:idRelative"],
+        ["xpath=//h3", "xpath:position"],
+        ["xpath=//h3[contains(.,'Hamburguesa Doble')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "a31cf14d-c4e1-4521-b138-8d70fb8bcd04",
+      "comment": "",
+      "command": "assertElementNotPresent",
+      "target": "css=.text-green-600:nth-child(3)",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "e17d0eae-3d7a-4fbb-9d28-f9071a1a3ea7",
+      "comment": "",
+      "command": "click",
+      "target": "css=.bg-primary:nth-child(1)",
+      "targets": [
+        ["css=.bg-primary:nth-child(1)", "css:finder"],
+        ["xpath=//div[@id='radix-«r0»-content-cart']/div/div[4]/div[3]/button", "xpath:idRelative"],
+        ["xpath=//div[4]/div[3]/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Continuar con la dirección')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "45533f4b-134c-4131-a19a-5b467a542deb",
+      "comment": "",
+      "command": "click",
+      "target": "css=.rounded-xl:nth-child(2)",
+      "targets": [
+        ["css=.rounded-xl:nth-child(2)", "css:finder"],
+        ["xpath=//div[@id='radix-«r0»-content-address']/div/div[2]/div[2]", "xpath:idRelative"],
+        ["xpath=//div[2]/div[2]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "35420534-955f-4fbb-94d1-7cbcc189b8bb",
+      "comment": "",
+      "command": "assertElementPresent",
+      "target": "css=.lucide:nth-child(2) > path:nth-child(1)",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "63731016-0d9d-4fd3-acb0-2f365b554162",
+      "comment": "",
+      "command": "click",
+      "target": "css=.hover\\3A bg-primary\\/90",
+      "targets": [
+        ["css=.hover\\3A bg-primary\\/90", "css:finder"],
+        ["xpath=//div[@id='radix-«r0»-content-address']/div/div[3]/div/button", "xpath:idRelative"],
+        ["xpath=//div[3]/div/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Continuar con el pago')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "7dacd656-a862-4a2e-a2c4-ea75df18c701",
+      "comment": "",
+      "command": "click",
+      "target": "css=.px-3:nth-child(1)",
+      "targets": [
+        ["css=.px-3:nth-child(1)", "css:finder"],
+        ["xpath=//div[@id='radix-«r0»-content-payment']/div/div[2]/div/button", "xpath:idRelative"],
+        ["xpath=//div[2]/div/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Usuario nuevo')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "27c3927f-c046-49a6-a025-c3a6caa6a1d4",
+      "comment": "",
+      "command": "assertText",
+      "target": "css=.text-green-600:nth-child(2)",
+      "targets": [
+        ["css=.text-green-600:nth-child(2)", "css:finder"],
+        ["xpath=//div[@id='radix-«rb»-content-payment']/div/div[4]/div/div/div[2]/span[2]", "xpath:idRelative"],
+        ["xpath=//div[2]/span[2]", "xpath:position"],
+        ["xpath=//span[contains(.,'-$2.00')]", "xpath:innerText"]
+      ],
+      "value": "-$2.00"
+    }, {
+      "id": "bd8e4c4e-2a67-42f5-a808-96cac519a0c6",
+      "comment": "",
+      "command": "click",
+      "target": "css=.bg-card:nth-child(3) > .p-4",
+      "targets": [
+        ["css=.bg-card:nth-child(3) > .p-4", "css:finder"],
+        ["xpath=//div[@id='radix-«r0»-content-payment']/div/div[3]/div[3]/div", "xpath:idRelative"],
+        ["xpath=//div[3]/div[3]/div", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "fc642fcd-474e-4d86-bd84-cbf47ecc6f3e",
+      "comment": "",
+      "command": "click",
+      "target": "css=.px-4",
+      "targets": [
+        ["css=.px-4", "css:finder"],
+        ["xpath=//div[@id='radix-«r0»-content-payment']/div/div[4]/div[2]/button", "xpath:idRelative"],
+        ["xpath=//div[2]/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Realizar pedido')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "873bdd3d-d27c-4717-80d6-acd18caf8d8a",
+      "comment": "",
+      "command": "verifyText",
+      "target": "css=.justify-between:nth-child(3) > span:nth-child(2)",
+      "targets": [],
+      "value": "$4.00"
+    }, {
+      "id": "a383ea74-b376-4fca-90b8-4bb507aef9ce",
+      "comment": "",
+      "command": "waitForElementPresent",
+      "target": "css=.inline-flex:nth-child(4)",
+      "targets": [],
+      "value": "30000"
+    }]
+  }, {
+    "id": "cc36a325-4a65-43e8-853d-887f1d39c078",
+    "name": "R3 - Código válido - envío largo - usuario nuevo",
+    "commands": [{
+      "id": "91645136-4a89-46e9-ab77-bd2779da530d",
+      "comment": "",
+      "command": "open",
+      "target": "https://rappi-payment.onrender.com/payment",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "a1526087-7c28-4179-8a32-f81fd7048683",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1280x720",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "88e8bb05-0f15-4651-a2a0-ee70177ccd43",
+      "comment": "",
+      "command": "waitForElementPresent",
+      "target": "css=.font-bold",
+      "targets": [
+        ["css=.font-bold", "css:finder"],
+        ["xpath=//a/span", "xpath:position"],
+        ["xpath=//span[contains(.,'Rappi')]", "xpath:innerText"]
+      ],
+      "value": "1200000"
+    }, {
+      "id": "907c9a49-350c-4fc2-8c7a-a834ff50ece5",
+      "comment": "",
+      "command": "click",
+      "target": "css=.bg-card:nth-child(2) > .p-4 .font-semibold",
+      "targets": [
+        ["css=.bg-card:nth-child(2) > .p-4 .font-semibold", "css:finder"],
+        ["xpath=//div[@id='radix-«r0»-content-restaurants']/div/div[2]/div[2]/div/div/div[2]/h3", "xpath:idRelative"],
+        ["xpath=//div[2]/div/div/div[2]/h3", "xpath:position"],
+        ["xpath=//h3[contains(.,'Fast Food Heaven')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "149724ed-8abf-4c2f-a477-bad99840c43a",
+      "comment": "",
+      "command": "click",
+      "target": "css=.bg-card:nth-child(2) .inline-flex",
+      "targets": [
+        ["css=.bg-card:nth-child(2) .inline-flex", "css:finder"],
+        ["xpath=//div[@id='radix-«r0»-content-products']/div/div[3]/div[2]/div/div/div[2]/div/button", "xpath:idRelative"],
+        ["xpath=//div[2]/div/div/div[2]/div/button", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "1d799857-b0e6-4d0f-bb31-0c9e874dfe3e",
+      "comment": "",
+      "command": "click",
+      "target": "css=.justify-between > .rounded-md",
+      "targets": [
+        ["css=.justify-between > .rounded-md", "css:finder"],
+        ["xpath=//div[@id='radix-«r0»-content-products']/div/div/button", "xpath:idRelative"],
+        ["xpath=//div[3]/div[2]/div/div/button", "xpath:position"],
+        ["xpath=//button[contains(.,'1 items • $11.50')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "9ac00a35-e039-4189-89cd-2d7690c96c40",
+      "comment": "",
+      "command": "assertElementPresent",
+      "target": "css=.flex-1 > .font-medium",
+      "targets": [
+        ["css=.flex-1 > .font-medium", "css:finder"],
+        ["xpath=//div[@id='radix-«r0»-content-cart']/div/div[2]/div/div/div[2]/h3", "xpath:idRelative"],
+        ["xpath=//h3", "xpath:position"],
+        ["xpath=//h3[contains(.,'Hamburguesa Doble')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "afcd70ec-a00f-4400-b89f-ae1eb33d428b",
+      "comment": "",
+      "command": "type",
+      "target": "id=promo-code",
+      "targets": [
+        ["id=promo-code", "id"],
+        ["css=#promo-code", "css:finder"],
+        ["xpath=//input[@id='promo-code']", "xpath:attributes"],
+        ["xpath=//div[@id='radix-«r0»-content-cart']/div/div[3]/div/div/div/div/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "RAPPI10"
+    }, {
+      "id": "01261ff0-73f5-42de-ae5d-9eaa3ddeb413",
+      "comment": "",
+      "command": "click",
+      "target": "css=.inline-flex:nth-child(2)",
+      "targets": [
+        ["css=.inline-flex:nth-child(2)", "css:finder"],
+        ["xpath=//div[@id='radix-«r0»-content-cart']/div/div[3]/div/div/div/button", "xpath:idRelative"],
+        ["xpath=//div[3]/div/div[3]/div/div/div/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Aplicar')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "f96bc413-20fb-49d3-92aa-d760aa17d449",
+      "comment": "",
+      "command": "assertElementPresent",
+      "target": "css=.text-green-600:nth-child(3)",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "61daadcf-a6f1-4c01-b0ef-69c80244fdb6",
+      "comment": "",
+      "command": "click",
+      "target": "css=.bg-primary:nth-child(1)",
+      "targets": [
+        ["css=.bg-primary:nth-child(1)", "css:finder"],
+        ["xpath=//div[@id='radix-«r0»-content-cart']/div/div[4]/div[3]/button", "xpath:idRelative"],
+        ["xpath=//div[4]/div[3]/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Continuar con la dirección')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "da39e247-f263-47c4-ac9d-125b2db4a4de",
+      "comment": "",
+      "command": "click",
+      "target": "css=.cursor-pointer:nth-child(3)",
+      "targets": [
+        ["css=.cursor-pointer:nth-child(3)", "css:finder"],
+        ["xpath=//div[@id='radix-«r0»-content-address']/div/div[2]/div[3]", "xpath:idRelative"],
+        ["xpath=//div[2]/div[3]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "6bd8fac0-c7e5-4e0c-a819-1cf551282d7c",
+      "comment": "",
+      "command": "assertElementPresent",
+      "target": "css=.lucide:nth-child(2)",
+      "targets": [
+        ["css=.lucide:nth-child(2)", "css:finder"]
+      ],
+      "value": ""
+    }, {
+      "id": "c242d051-9e41-405b-b54d-ac6a6c13af2c",
+      "comment": "",
+      "command": "click",
+      "target": "css=.hover\\3A bg-primary\\/90",
+      "targets": [
+        ["css=.hover\\3A bg-primary\\/90", "css:finder"],
+        ["xpath=//div[@id='radix-«r0»-content-address']/div/div[3]/div/button", "xpath:idRelative"],
+        ["xpath=//div[3]/div/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Continuar con el pago')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "0f2c4571-a51b-46e6-bb39-f11fef918364",
+      "comment": "",
+      "command": "click",
+      "target": "css=.px-3:nth-child(1)",
+      "targets": [
+        ["css=.px-3:nth-child(1)", "css:finder"],
+        ["xpath=//div[@id='radix-«r0»-content-payment']/div/div[2]/div/button", "xpath:idRelative"],
+        ["xpath=//div[2]/div/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Usuario nuevo')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "a01bf8c6-55fb-419a-b043-d9ea0a7f36a9",
+      "comment": "",
+      "command": "assertText",
+      "target": "css=.text-green-600:nth-child(2)",
+      "targets": [
+        ["css=.text-green-600:nth-child(2)", "css:finder"],
+        ["xpath=//div[@id='radix-«rb»-content-payment']/div/div[4]/div/div/div[2]/span[2]", "xpath:idRelative"],
+        ["xpath=//div[2]/span[2]", "xpath:position"],
+        ["xpath=//span[contains(.,'-$2.00')]", "xpath:innerText"]
+      ],
+      "value": "-$3.15"
+    }, {
+      "id": "90bcafdb-b8bc-4f8c-8d65-b12eec971a51",
+      "comment": "",
+      "command": "click",
+      "target": "css=.bg-card:nth-child(3) > .p-4",
+      "targets": [
+        ["css=.bg-card:nth-child(3) > .p-4", "css:finder"],
+        ["xpath=//div[@id='radix-«r0»-content-payment']/div/div[3]/div[3]/div", "xpath:idRelative"],
+        ["xpath=//div[3]/div[3]/div", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "d208d8c9-95ba-4153-b8f5-01d441dd423e",
+      "comment": "",
+      "command": "click",
+      "target": "css=.px-4",
+      "targets": [
+        ["css=.px-4", "css:finder"],
+        ["xpath=//div[@id='radix-«r0»-content-payment']/div/div[4]/div[2]/button", "xpath:idRelative"],
+        ["xpath=//div[2]/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Realizar pedido')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "ca6573d5-2d39-4fda-a71a-d7d989ab31b9",
+      "comment": "",
+      "command": "verifyText",
+      "target": "css=.justify-between:nth-child(3) > span:nth-child(2)",
+      "targets": [],
+      "value": "$6.00"
+    }, {
+      "id": "41db9b54-7cc9-4668-8d56-2257bb9471c6",
+      "comment": "",
+      "command": "waitForElementPresent",
+      "target": "css=.inline-flex:nth-child(4)",
+      "targets": [],
+      "value": "30000"
+    }]
+  }, {
+    "id": "9814b6dc-2f4b-4867-83e1-6240d73d8649",
+    "name": "R12 - Código inválido - envío largo - usuario nuevo",
+    "commands": [{
+      "id": "00d6d06a-577a-4563-8156-740194d30c35",
+      "comment": "",
+      "command": "open",
+      "target": "https://rappi-payment.onrender.com/payment",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "a218059a-08b6-427e-881b-79bcf5f69467",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1280x720",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "0bdca73a-ed49-47f7-abf0-cf7ea76e1c92",
+      "comment": "",
+      "command": "waitForElementPresent",
+      "target": "css=.font-bold",
+      "targets": [
+        ["css=.font-bold", "css:finder"],
+        ["xpath=//a/span", "xpath:position"],
+        ["xpath=//span[contains(.,'Rappi')]", "xpath:innerText"]
+      ],
+      "value": "1200000"
+    }, {
+      "id": "9f2e48ee-b3bc-4f64-88d3-cfbccd8d4bbb",
+      "comment": "",
+      "command": "click",
+      "target": "css=.bg-card:nth-child(2) > .p-4 .font-semibold",
+      "targets": [
+        ["css=.bg-card:nth-child(2) > .p-4 .font-semibold", "css:finder"],
+        ["xpath=//div[@id='radix-«r0»-content-restaurants']/div/div[2]/div[2]/div/div/div[2]/h3", "xpath:idRelative"],
+        ["xpath=//div[2]/div/div/div[2]/h3", "xpath:position"],
+        ["xpath=//h3[contains(.,'Fast Food Heaven')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "bda14b4a-414d-4208-98ff-dd82be9a3869",
+      "comment": "",
+      "command": "click",
+      "target": "css=.bg-card:nth-child(2) .inline-flex",
+      "targets": [
+        ["css=.bg-card:nth-child(2) .inline-flex", "css:finder"],
+        ["xpath=//div[@id='radix-«r0»-content-products']/div/div[3]/div[2]/div/div/div[2]/div/button", "xpath:idRelative"],
+        ["xpath=//div[2]/div/div/div[2]/div/button", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "f67f57b6-d998-437d-af4a-0ef5791040f3",
+      "comment": "",
+      "command": "click",
+      "target": "css=.justify-between > .rounded-md",
+      "targets": [
+        ["css=.justify-between > .rounded-md", "css:finder"],
+        ["xpath=//div[@id='radix-«r0»-content-products']/div/div/button", "xpath:idRelative"],
+        ["xpath=//div[3]/div[2]/div/div/button", "xpath:position"],
+        ["xpath=//button[contains(.,'1 items • $11.50')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "60266a8c-862e-4c61-a81e-b369d25331ef",
+      "comment": "",
+      "command": "assertElementPresent",
+      "target": "css=.flex-1 > .font-medium",
+      "targets": [
+        ["css=.flex-1 > .font-medium", "css:finder"],
+        ["xpath=//div[@id='radix-«r0»-content-cart']/div/div[2]/div/div/div[2]/h3", "xpath:idRelative"],
+        ["xpath=//h3", "xpath:position"],
+        ["xpath=//h3[contains(.,'Hamburguesa Doble')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "5a0ffab7-8836-4437-ae49-1de39caeceb8",
+      "comment": "",
+      "command": "assertElementNotPresent",
+      "target": "css=.text-green-600:nth-child(3)",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "b62111d1-9b00-4879-a569-8943bac1d1d7",
+      "comment": "",
+      "command": "click",
+      "target": "css=.bg-primary:nth-child(1)",
+      "targets": [
+        ["css=.bg-primary:nth-child(1)", "css:finder"],
+        ["xpath=//div[@id='radix-«r0»-content-cart']/div/div[4]/div[3]/button", "xpath:idRelative"],
+        ["xpath=//div[4]/div[3]/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Continuar con la dirección')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "c7105a42-8b40-4d7a-a445-d625994eff74",
+      "comment": "",
+      "command": "click",
+      "target": "css=.cursor-pointer:nth-child(3)",
+      "targets": [
+        ["css=.cursor-pointer:nth-child(3)", "css:finder"],
+        ["xpath=//div[@id='radix-«r0»-content-address']/div/div[2]/div[3]", "xpath:idRelative"],
+        ["xpath=//div[2]/div[3]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "339379f0-9c80-4e2e-835c-1944b86f1fa1",
+      "comment": "",
+      "command": "assertElementPresent",
+      "target": "css=.lucide:nth-child(2)",
+      "targets": [
+        ["css=.lucide:nth-child(2)", "css:finder"]
+      ],
+      "value": ""
+    }, {
+      "id": "52990439-517d-417f-ae5f-d27918d768d5",
+      "comment": "",
+      "command": "click",
+      "target": "css=.hover\\3A bg-primary\\/90",
+      "targets": [
+        ["css=.hover\\3A bg-primary\\/90", "css:finder"],
+        ["xpath=//div[@id='radix-«r0»-content-address']/div/div[3]/div/button", "xpath:idRelative"],
+        ["xpath=//div[3]/div/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Continuar con el pago')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "72f1a9a7-a2e5-4b45-a431-74805df15a2a",
+      "comment": "",
+      "command": "click",
+      "target": "css=.px-3:nth-child(1)",
+      "targets": [
+        ["css=.px-3:nth-child(1)", "css:finder"],
+        ["xpath=//div[@id='radix-«r0»-content-payment']/div/div[2]/div/button", "xpath:idRelative"],
+        ["xpath=//div[2]/div/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Usuario nuevo')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "73884b24-f95a-4222-b9c7-22b9773523f4",
+      "comment": "",
+      "command": "assertText",
+      "target": "css=.text-green-600:nth-child(2)",
+      "targets": [
+        ["css=.text-green-600:nth-child(2)", "css:finder"],
+        ["xpath=//div[@id='radix-«rb»-content-payment']/div/div[4]/div/div/div[2]/span[2]", "xpath:idRelative"],
+        ["xpath=//div[2]/span[2]", "xpath:position"],
+        ["xpath=//span[contains(.,'-$2.00')]", "xpath:innerText"]
+      ],
+      "value": "-$2.00"
+    }, {
+      "id": "0629b3ac-a8bf-4262-8352-c4f345a8f0ac",
+      "comment": "",
+      "command": "click",
+      "target": "css=.bg-card:nth-child(3) > .p-4",
+      "targets": [
+        ["css=.bg-card:nth-child(3) > .p-4", "css:finder"],
+        ["xpath=//div[@id='radix-«r0»-content-payment']/div/div[3]/div[3]/div", "xpath:idRelative"],
+        ["xpath=//div[3]/div[3]/div", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "5437b528-42d1-49d0-8f98-636a13599adb",
+      "comment": "",
+      "command": "click",
+      "target": "css=.px-4",
+      "targets": [
+        ["css=.px-4", "css:finder"],
+        ["xpath=//div[@id='radix-«r0»-content-payment']/div/div[4]/div[2]/button", "xpath:idRelative"],
+        ["xpath=//div[2]/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Realizar pedido')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "dceabfa1-1904-49ae-a308-d4fd91ac2d3b",
+      "comment": "",
+      "command": "verifyText",
+      "target": "css=.justify-between:nth-child(3) > span:nth-child(2)",
+      "targets": [],
+      "value": "$6.00"
+    }, {
+      "id": "9fcac646-a9fd-42dc-98e7-ac34e76e9014",
+      "comment": "",
+      "command": "waitForElementPresent",
+      "target": "css=.inline-flex:nth-child(4)",
+      "targets": [],
+      "value": "30000"
+    }]
+  }, {
+    "id": "eca38156-89a5-4d6e-b565-9b896139a191",
+    "name": "R9 - Código válido - envío largo - usuario regular",
+    "commands": [{
+      "id": "aab37bbd-d961-49c9-b336-8259f50f4e46",
+      "comment": "",
+      "command": "open",
+      "target": "https://rappi-payment.onrender.com/payment",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "7baee552-6ae0-4609-a5db-01acbab5df4c",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1280x720",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "6cbd4aa5-4e65-4d6c-87cb-2c474bf9f6a1",
+      "comment": "",
+      "command": "waitForElementPresent",
+      "target": "css=.font-bold",
+      "targets": [
+        ["css=.font-bold", "css:finder"],
+        ["xpath=//a/span", "xpath:position"],
+        ["xpath=//span[contains(.,'Rappi')]", "xpath:innerText"]
+      ],
+      "value": "1200000"
+    }, {
+      "id": "40be3599-4a3d-4302-a2d3-35940acebca2",
+      "comment": "",
+      "command": "click",
+      "target": "css=.bg-card:nth-child(2) > .p-4 .font-semibold",
+      "targets": [
+        ["css=.bg-card:nth-child(2) > .p-4 .font-semibold", "css:finder"],
+        ["xpath=//div[@id='radix-«r0»-content-restaurants']/div/div[2]/div[2]/div/div/div[2]/h3", "xpath:idRelative"],
+        ["xpath=//div[2]/div/div/div[2]/h3", "xpath:position"],
+        ["xpath=//h3[contains(.,'Fast Food Heaven')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "4cf12771-ce99-44c1-b5e8-94f934c60901",
+      "comment": "",
+      "command": "click",
+      "target": "css=.bg-card:nth-child(2) .inline-flex",
+      "targets": [
+        ["css=.bg-card:nth-child(2) .inline-flex", "css:finder"],
+        ["xpath=//div[@id='radix-«r0»-content-products']/div/div[3]/div[2]/div/div/div[2]/div/button", "xpath:idRelative"],
+        ["xpath=//div[2]/div/div/div[2]/div/button", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "2256c624-39c3-444a-86b5-7050738eb1f3",
+      "comment": "",
+      "command": "click",
+      "target": "css=.justify-between > .rounded-md",
+      "targets": [
+        ["css=.justify-between > .rounded-md", "css:finder"],
+        ["xpath=//div[@id='radix-«r0»-content-products']/div/div/button", "xpath:idRelative"],
+        ["xpath=//div[3]/div[2]/div/div/button", "xpath:position"],
+        ["xpath=//button[contains(.,'1 items • $11.50')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "34303a96-4e22-4c81-8f90-21bac024d428",
+      "comment": "",
+      "command": "assertElementPresent",
+      "target": "css=.flex-1 > .font-medium",
+      "targets": [
+        ["css=.flex-1 > .font-medium", "css:finder"],
+        ["xpath=//div[@id='radix-«r0»-content-cart']/div/div[2]/div/div/div[2]/h3", "xpath:idRelative"],
+        ["xpath=//h3", "xpath:position"],
+        ["xpath=//h3[contains(.,'Hamburguesa Doble')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "6a93c91d-7a33-4ef5-b3ed-066be957dfe9",
+      "comment": "",
+      "command": "type",
+      "target": "id=promo-code",
+      "targets": [
+        ["id=promo-code", "id"],
+        ["css=#promo-code", "css:finder"],
+        ["xpath=//input[@id='promo-code']", "xpath:attributes"],
+        ["xpath=//div[@id='radix-«r0»-content-cart']/div/div[3]/div/div/div/div/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "RAPPI10"
+    }, {
+      "id": "7e8b1dd4-233a-40ac-8bab-ca1018edb315",
+      "comment": "",
+      "command": "click",
+      "target": "css=.inline-flex:nth-child(2)",
+      "targets": [
+        ["css=.inline-flex:nth-child(2)", "css:finder"],
+        ["xpath=//div[@id='radix-«r0»-content-cart']/div/div[3]/div/div/div/button", "xpath:idRelative"],
+        ["xpath=//div[3]/div/div[3]/div/div/div/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Aplicar')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "6ed00ff9-021e-4c24-9d9e-a912a8e0dfb8",
+      "comment": "",
+      "command": "assertElementPresent",
+      "target": "css=.text-green-600:nth-child(3)",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "18c44929-99c1-40ef-a177-d16b0241f288",
+      "comment": "",
+      "command": "click",
+      "target": "css=.bg-primary:nth-child(1)",
+      "targets": [
+        ["css=.bg-primary:nth-child(1)", "css:finder"],
+        ["xpath=//div[@id='radix-«r0»-content-cart']/div/div[4]/div[3]/button", "xpath:idRelative"],
+        ["xpath=//div[4]/div[3]/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Continuar con la dirección')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "b07dad11-0f83-4ac7-b9cf-cd46856bb179",
+      "comment": "",
+      "command": "click",
+      "target": "css=.cursor-pointer:nth-child(3)",
+      "targets": [
+        ["css=.cursor-pointer:nth-child(3)", "css:finder"],
+        ["xpath=//div[@id='radix-«r0»-content-address']/div/div[2]/div[3]", "xpath:idRelative"],
+        ["xpath=//div[2]/div[3]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "3988d7f6-092c-4f5f-a927-79a2c65d04f8",
+      "comment": "",
+      "command": "assertElementPresent",
+      "target": "css=.lucide:nth-child(2)",
+      "targets": [
+        ["css=.lucide:nth-child(2)", "css:finder"]
+      ],
+      "value": ""
+    }, {
+      "id": "76643faf-914d-47da-aa74-d4a89c249ee7",
+      "comment": "",
+      "command": "click",
+      "target": "css=.hover\\3A bg-primary\\/90",
+      "targets": [
+        ["css=.hover\\3A bg-primary\\/90", "css:finder"],
+        ["xpath=//div[@id='radix-«r0»-content-address']/div/div[3]/div/button", "xpath:idRelative"],
+        ["xpath=//div[3]/div/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Continuar con el pago')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "fde04c02-bb4e-4a17-be89-740634ff5476",
+      "comment": "",
+      "command": "click",
+      "target": "css=.inline-flex:nth-child(2)",
+      "targets": [
+        ["css=.inline-flex:nth-child(2)", "css:finder"],
+        ["xpath=//div[@id='radix-«r0»-content-payment']/div/div[2]/div/button[2]", "xpath:idRelative"],
+        ["xpath=//div[2]/div/button[2]", "xpath:position"],
+        ["xpath=//button[contains(.,'Usuario regular')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "e897fb1e-117f-4d7e-9529-fcc898339c61",
+      "comment": "",
+      "command": "assertText",
+      "target": "css=.text-green-600:nth-child(2)",
+      "targets": [
+        ["css=.text-green-600:nth-child(2)", "css:finder"],
+        ["xpath=//div[@id='radix-«rb»-content-payment']/div/div[4]/div/div/div[2]/span[2]", "xpath:idRelative"],
+        ["xpath=//div[2]/span[2]", "xpath:position"],
+        ["xpath=//span[contains(.,'-$2.00')]", "xpath:innerText"]
+      ],
+      "value": "-$1.15"
+    }, {
+      "id": "c081be3e-f664-407f-bcba-11aeeca33384",
+      "comment": "",
+      "command": "click",
+      "target": "css=.bg-card:nth-child(3) > .p-4",
+      "targets": [
+        ["css=.bg-card:nth-child(3) > .p-4", "css:finder"],
+        ["xpath=//div[@id='radix-«r0»-content-payment']/div/div[3]/div[3]/div", "xpath:idRelative"],
+        ["xpath=//div[3]/div[3]/div", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "c8bc7e46-c6f6-4e68-adde-4d06c5090edc",
+      "comment": "",
+      "command": "click",
+      "target": "css=.px-4",
+      "targets": [
+        ["css=.px-4", "css:finder"],
+        ["xpath=//div[@id='radix-«r0»-content-payment']/div/div[4]/div[2]/button", "xpath:idRelative"],
+        ["xpath=//div[2]/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Realizar pedido')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "bdadbd5e-5cde-4035-a523-e1a6b20b2c03",
+      "comment": "",
+      "command": "verifyText",
+      "target": "css=.justify-between:nth-child(3) > span:nth-child(2)",
+      "targets": [],
+      "value": "$6.00"
+    }, {
+      "id": "3689e86a-fe6f-4ce9-b420-fa8d41707814",
+      "comment": "",
+      "command": "waitForElementPresent",
+      "target": "css=.inline-flex:nth-child(4)",
+      "targets": [],
+      "value": "30000"
+    }]
+  }, {
+    "id": "294d0fc8-e9c6-4cb0-bbdc-716c07171977",
+    "name": "R6 - Código válido - envío largo - usuario premium",
+    "commands": [{
+      "id": "3ab0e6e9-97f7-42fd-bd5d-646890411bdc",
+      "comment": "",
+      "command": "open",
+      "target": "https://rappi-payment.onrender.com/payment",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "d6c132f9-38c7-4d70-be49-eb477f966541",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1280x720",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "81da38af-9ce9-4b85-a15e-8ffde3edf28b",
+      "comment": "",
+      "command": "waitForElementPresent",
+      "target": "css=.font-bold",
+      "targets": [
+        ["css=.font-bold", "css:finder"],
+        ["xpath=//a/span", "xpath:position"],
+        ["xpath=//span[contains(.,'Rappi')]", "xpath:innerText"]
+      ],
+      "value": "1200000"
+    }, {
+      "id": "82db3788-42c2-4eb0-adcc-9157aa232e1c",
+      "comment": "",
+      "command": "click",
+      "target": "css=.bg-card:nth-child(2) > .p-4 .font-semibold",
+      "targets": [
+        ["css=.bg-card:nth-child(2) > .p-4 .font-semibold", "css:finder"],
+        ["xpath=//div[@id='radix-«r0»-content-restaurants']/div/div[2]/div[2]/div/div/div[2]/h3", "xpath:idRelative"],
+        ["xpath=//div[2]/div/div/div[2]/h3", "xpath:position"],
+        ["xpath=//h3[contains(.,'Fast Food Heaven')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "5355be6a-ed4f-499f-a76c-f9d81bea7ce1",
+      "comment": "",
+      "command": "click",
+      "target": "css=.bg-card:nth-child(2) .inline-flex",
+      "targets": [
+        ["css=.bg-card:nth-child(2) .inline-flex", "css:finder"],
+        ["xpath=//div[@id='radix-«r0»-content-products']/div/div[3]/div[2]/div/div/div[2]/div/button", "xpath:idRelative"],
+        ["xpath=//div[2]/div/div/div[2]/div/button", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "86595f69-38e8-4499-8773-7c66cf7f30be",
+      "comment": "",
+      "command": "click",
+      "target": "css=.justify-between > .rounded-md",
+      "targets": [
+        ["css=.justify-between > .rounded-md", "css:finder"],
+        ["xpath=//div[@id='radix-«r0»-content-products']/div/div/button", "xpath:idRelative"],
+        ["xpath=//div[3]/div[2]/div/div/button", "xpath:position"],
+        ["xpath=//button[contains(.,'1 items • $11.50')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "2e4be652-e046-4a00-a20a-c35d1f920fe0",
+      "comment": "",
+      "command": "assertElementPresent",
+      "target": "css=.flex-1 > .font-medium",
+      "targets": [
+        ["css=.flex-1 > .font-medium", "css:finder"],
+        ["xpath=//div[@id='radix-«r0»-content-cart']/div/div[2]/div/div/div[2]/h3", "xpath:idRelative"],
+        ["xpath=//h3", "xpath:position"],
+        ["xpath=//h3[contains(.,'Hamburguesa Doble')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "103d8531-8584-44c8-bcbd-f45b52df1c1b",
+      "comment": "",
+      "command": "type",
+      "target": "id=promo-code",
+      "targets": [
+        ["id=promo-code", "id"],
+        ["css=#promo-code", "css:finder"],
+        ["xpath=//input[@id='promo-code']", "xpath:attributes"],
+        ["xpath=//div[@id='radix-«r0»-content-cart']/div/div[3]/div/div/div/div/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "RAPPI10"
+    }, {
+      "id": "e4933d1b-e8f7-4d93-b78f-86610428af2f",
+      "comment": "",
+      "command": "click",
+      "target": "css=.inline-flex:nth-child(2)",
+      "targets": [
+        ["css=.inline-flex:nth-child(2)", "css:finder"],
+        ["xpath=//div[@id='radix-«r0»-content-cart']/div/div[3]/div/div/div/button", "xpath:idRelative"],
+        ["xpath=//div[3]/div/div[3]/div/div/div/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Aplicar')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "86c8307c-56e1-4966-a0ce-bfa57025db22",
+      "comment": "",
+      "command": "assertElementPresent",
+      "target": "css=.text-green-600:nth-child(3)",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "3bfd7d85-a154-47e6-8ca4-42f07726feb6",
+      "comment": "",
+      "command": "click",
+      "target": "css=.bg-primary:nth-child(1)",
+      "targets": [
+        ["css=.bg-primary:nth-child(1)", "css:finder"],
+        ["xpath=//div[@id='radix-«r0»-content-cart']/div/div[4]/div[3]/button", "xpath:idRelative"],
+        ["xpath=//div[4]/div[3]/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Continuar con la dirección')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "10c2d17a-bf4b-4cde-8229-5c6273795798",
+      "comment": "",
+      "command": "click",
+      "target": "css=.cursor-pointer:nth-child(3)",
+      "targets": [
+        ["css=.cursor-pointer:nth-child(3)", "css:finder"],
+        ["xpath=//div[@id='radix-«r0»-content-address']/div/div[2]/div[3]", "xpath:idRelative"],
+        ["xpath=//div[2]/div[3]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "6bb009c7-1009-4acb-8aed-167b74a006b3",
+      "comment": "",
+      "command": "assertElementPresent",
+      "target": "css=.lucide:nth-child(2)",
+      "targets": [
+        ["css=.lucide:nth-child(2)", "css:finder"]
+      ],
+      "value": ""
+    }, {
+      "id": "903c43f2-2163-4cde-a149-b82f9625d6e2",
+      "comment": "",
+      "command": "click",
+      "target": "css=.hover\\3A bg-primary\\/90",
+      "targets": [
+        ["css=.hover\\3A bg-primary\\/90", "css:finder"],
+        ["xpath=//div[@id='radix-«r0»-content-address']/div/div[3]/div/button", "xpath:idRelative"],
+        ["xpath=//div[3]/div/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Continuar con el pago')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "c3282a77-b3ad-47ad-a5c4-a1ade7df3c17",
+      "comment": "",
+      "command": "click",
+      "target": "css=.inline-flex:nth-child(3)",
+      "targets": [
+        ["css=.inline-flex:nth-child(3)", "css:finder"],
+        ["xpath=//div[@id='radix-«r0»-content-payment']/div/div[2]/div/button[3]", "xpath:idRelative"],
+        ["xpath=//div[2]/div/button[3]", "xpath:position"],
+        ["xpath=//button[contains(.,'Usuario premium')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "2a182601-e4d5-4af2-b2e5-a75be042e3b4",
+      "comment": "",
+      "command": "assertText",
+      "target": "css=.text-green-600:nth-child(2)",
+      "targets": [
+        ["css=.text-green-600:nth-child(2)", "css:finder"],
+        ["xpath=//div[@id='radix-«rb»-content-payment']/div/div[4]/div/div/div[2]/span[2]", "xpath:idRelative"],
+        ["xpath=//div[2]/span[2]", "xpath:position"],
+        ["xpath=//span[contains(.,'-$2.00')]", "xpath:innerText"]
+      ],
+      "value": "-$1.73"
+    }, {
+      "id": "892108e1-cdef-4fc0-8f46-598372115c6a",
+      "comment": "",
+      "command": "click",
+      "target": "css=.bg-card:nth-child(3) > .p-4",
+      "targets": [
+        ["css=.bg-card:nth-child(3) > .p-4", "css:finder"],
+        ["xpath=//div[@id='radix-«r0»-content-payment']/div/div[3]/div[3]/div", "xpath:idRelative"],
+        ["xpath=//div[3]/div[3]/div", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "1241d265-c81b-4631-b76c-a468b459f960",
+      "comment": "",
+      "command": "click",
+      "target": "css=.px-4",
+      "targets": [
+        ["css=.px-4", "css:finder"],
+        ["xpath=//div[@id='radix-«r0»-content-payment']/div/div[4]/div[2]/button", "xpath:idRelative"],
+        ["xpath=//div[2]/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Realizar pedido')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "f2a20a0b-d1f8-44a9-8363-c43d7651be98",
+      "comment": "",
+      "command": "verifyText",
+      "target": "css=.justify-between:nth-child(3) > span:nth-child(2)",
+      "targets": [],
+      "value": "$6.00"
+    }, {
+      "id": "cca9757f-627b-4d4a-87ae-ba13b944eb2f",
+      "comment": "",
+      "command": "waitForElementPresent",
+      "target": "css=.inline-flex:nth-child(4)",
+      "targets": [],
+      "value": "30000"
+    }]
+  }, {
+    "id": "5c93389c-a754-4e49-a7e0-7e1569647138",
+    "name": "R8 - Código válido - envío medio - usuario regular",
+    "commands": [{
+      "id": "04aad8ba-47e7-41fc-b340-6065d39600a3",
+      "comment": "",
+      "command": "open",
+      "target": "https://rappi-payment.onrender.com/payment",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "9433b8e5-c412-4501-bee5-5aae63c3a9e5",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1280x720",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "11fc86e9-d18b-4e95-8cd5-6b6e9079b8fa",
+      "comment": "",
+      "command": "waitForElementPresent",
+      "target": "css=.font-bold",
+      "targets": [
+        ["css=.font-bold", "css:finder"],
+        ["xpath=//a/span", "xpath:position"],
+        ["xpath=//span[contains(.,'Rappi')]", "xpath:innerText"]
+      ],
+      "value": "1200000"
+    }, {
+      "id": "e60b57b9-9fda-44dd-967d-8343ff62e3eb",
+      "comment": "",
+      "command": "click",
+      "target": "css=.bg-card:nth-child(2) > .p-4 .font-semibold",
+      "targets": [
+        ["css=.bg-card:nth-child(2) > .p-4 .font-semibold", "css:finder"],
+        ["xpath=//div[@id='radix-«r0»-content-restaurants']/div/div[2]/div[2]/div/div/div[2]/h3", "xpath:idRelative"],
+        ["xpath=//div[2]/div/div/div[2]/h3", "xpath:position"],
+        ["xpath=//h3[contains(.,'Fast Food Heaven')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "54f265b8-7b4d-4630-a8c2-df7db08d40ca",
+      "comment": "",
+      "command": "click",
+      "target": "css=.bg-card:nth-child(2) .inline-flex",
+      "targets": [
+        ["css=.bg-card:nth-child(2) .inline-flex", "css:finder"],
+        ["xpath=//div[@id='radix-«r0»-content-products']/div/div[3]/div[2]/div/div/div[2]/div/button", "xpath:idRelative"],
+        ["xpath=//div[2]/div/div/div[2]/div/button", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "b51d8277-2c4e-4b17-87de-556e3312f512",
+      "comment": "",
+      "command": "click",
+      "target": "css=.justify-between > .rounded-md",
+      "targets": [
+        ["css=.justify-between > .rounded-md", "css:finder"],
+        ["xpath=//div[@id='radix-«r0»-content-products']/div/div/button", "xpath:idRelative"],
+        ["xpath=//div[3]/div[2]/div/div/button", "xpath:position"],
+        ["xpath=//button[contains(.,'1 items • $11.50')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "cc55e912-470e-40d6-9e65-870cd6d9853a",
+      "comment": "",
+      "command": "assertElementPresent",
+      "target": "css=.flex-1 > .font-medium",
+      "targets": [
+        ["css=.flex-1 > .font-medium", "css:finder"],
+        ["xpath=//div[@id='radix-«r0»-content-cart']/div/div[2]/div/div/div[2]/h3", "xpath:idRelative"],
+        ["xpath=//h3", "xpath:position"],
+        ["xpath=//h3[contains(.,'Hamburguesa Doble')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "3774fd8b-2329-41be-aa66-9d991ad0eddf",
+      "comment": "",
+      "command": "type",
+      "target": "id=promo-code",
+      "targets": [
+        ["id=promo-code", "id"],
+        ["css=#promo-code", "css:finder"],
+        ["xpath=//input[@id='promo-code']", "xpath:attributes"],
+        ["xpath=//div[@id='radix-«r0»-content-cart']/div/div[3]/div/div/div/div/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "RAPPI10"
+    }, {
+      "id": "fe8a6b3d-d3b9-4cf6-9d3b-38d08f4f81ee",
+      "comment": "",
+      "command": "click",
+      "target": "css=.inline-flex:nth-child(2)",
+      "targets": [
+        ["css=.inline-flex:nth-child(2)", "css:finder"],
+        ["xpath=//div[@id='radix-«r0»-content-cart']/div/div[3]/div/div/div/button", "xpath:idRelative"],
+        ["xpath=//div[3]/div/div[3]/div/div/div/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Aplicar')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "31128ca8-14a5-4399-853e-11dc62e244d7",
+      "comment": "",
+      "command": "assertElementPresent",
+      "target": "css=.text-green-600:nth-child(3)",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "e917faf5-f336-4ca2-a469-f69d6f6694c4",
+      "comment": "",
+      "command": "click",
+      "target": "css=.bg-primary:nth-child(1)",
+      "targets": [
+        ["css=.bg-primary:nth-child(1)", "css:finder"],
+        ["xpath=//div[@id='radix-«r0»-content-cart']/div/div[4]/div[3]/button", "xpath:idRelative"],
+        ["xpath=//div[4]/div[3]/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Continuar con la dirección')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "c82c581d-aa49-484c-803d-54ad5037c724",
+      "comment": "",
+      "command": "click",
+      "target": "css=.rounded-xl:nth-child(2)",
+      "targets": [
+        ["css=.rounded-xl:nth-child(2)", "css:finder"],
+        ["xpath=//div[@id='radix-«r0»-content-address']/div/div[2]/div[2]", "xpath:idRelative"],
+        ["xpath=//div[2]/div[2]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "203b65bf-3e03-4cf1-93e5-28b26e7f6938",
+      "comment": "",
+      "command": "assertElementPresent",
+      "target": "css=.lucide:nth-child(2) > path:nth-child(1)",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "e0848cc6-05f8-4bb4-be2c-9e97a06b7fc2",
+      "comment": "",
+      "command": "click",
+      "target": "css=.hover\\3A bg-primary\\/90",
+      "targets": [
+        ["css=.hover\\3A bg-primary\\/90", "css:finder"],
+        ["xpath=//div[@id='radix-«r0»-content-address']/div/div[3]/div/button", "xpath:idRelative"],
+        ["xpath=//div[3]/div/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Continuar con el pago')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "c7362d11-7d3f-4e4d-94cd-f2880000eb59",
+      "comment": "",
+      "command": "click",
+      "target": "css=.inline-flex:nth-child(2)",
+      "targets": [
+        ["css=.px-3:nth-child(1)", "css:finder"],
+        ["xpath=//div[@id='radix-«r0»-content-payment']/div/div[2]/div/button", "xpath:idRelative"],
+        ["xpath=//div[2]/div/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Usuario nuevo')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "5fae41ab-da7d-4ded-b8f2-23b6c31cfc64",
+      "comment": "",
+      "command": "assertText",
+      "target": "css=.text-green-600:nth-child(2)",
+      "targets": [
+        ["css=.text-green-600:nth-child(2)", "css:finder"],
+        ["xpath=//div[@id='radix-«rb»-content-payment']/div/div[4]/div/div/div[2]/span[2]", "xpath:idRelative"],
+        ["xpath=//div[2]/span[2]", "xpath:position"],
+        ["xpath=//span[contains(.,'-$2.00')]", "xpath:innerText"]
+      ],
+      "value": "-$1.15"
+    }, {
+      "id": "c269820e-7a3d-47e8-a3c6-fd56549f7453",
+      "comment": "",
+      "command": "click",
+      "target": "css=.bg-card:nth-child(3) > .p-4",
+      "targets": [
+        ["css=.bg-card:nth-child(3) > .p-4", "css:finder"],
+        ["xpath=//div[@id='radix-«r0»-content-payment']/div/div[3]/div[3]/div", "xpath:idRelative"],
+        ["xpath=//div[3]/div[3]/div", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "522cc19b-1b89-4816-8a30-941b7767d90f",
+      "comment": "",
+      "command": "click",
+      "target": "css=.px-4",
+      "targets": [
+        ["css=.px-4", "css:finder"],
+        ["xpath=//div[@id='radix-«r0»-content-payment']/div/div[4]/div[2]/button", "xpath:idRelative"],
+        ["xpath=//div[2]/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Realizar pedido')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "a31ac7ce-59ed-4b4e-b493-0863278e99d2",
+      "comment": "",
+      "command": "verifyText",
+      "target": "css=.justify-between:nth-child(3) > span:nth-child(2)",
+      "targets": [],
+      "value": "$4.00"
+    }, {
+      "id": "0f3858cf-38a7-4946-afd6-e9219b25b72b",
+      "comment": "",
+      "command": "waitForElementPresent",
+      "target": "css=.inline-flex:nth-child(4)",
+      "targets": [],
+      "value": "30000"
+    }]
+  }, {
+    "id": "706c6961-64f5-48cb-8926-6e156c0d4ae2",
+    "name": "R5 - Código válido - envío medio - usuario premium",
+    "commands": [{
+      "id": "ce8ba468-61a7-433c-9ca5-b20139a7c35f",
+      "comment": "",
+      "command": "open",
+      "target": "https://rappi-payment.onrender.com/payment",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "53c18f0c-186e-45d6-b878-f2dc052c9674",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1280x720",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "7fc11211-07c0-4144-bcbb-f63be077dbf3",
+      "comment": "",
+      "command": "waitForElementPresent",
+      "target": "css=.font-bold",
+      "targets": [
+        ["css=.font-bold", "css:finder"],
+        ["xpath=//a/span", "xpath:position"],
+        ["xpath=//span[contains(.,'Rappi')]", "xpath:innerText"]
+      ],
+      "value": "1200000"
+    }, {
+      "id": "4fc52695-4d6b-4270-8453-985e60c3d1db",
+      "comment": "",
+      "command": "click",
+      "target": "css=.bg-card:nth-child(2) > .p-4 .font-semibold",
+      "targets": [
+        ["css=.bg-card:nth-child(2) > .p-4 .font-semibold", "css:finder"],
+        ["xpath=//div[@id='radix-«r0»-content-restaurants']/div/div[2]/div[2]/div/div/div[2]/h3", "xpath:idRelative"],
+        ["xpath=//div[2]/div/div/div[2]/h3", "xpath:position"],
+        ["xpath=//h3[contains(.,'Fast Food Heaven')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "3663c57d-b97e-42ab-a043-1e1ac9bcdb89",
+      "comment": "",
+      "command": "click",
+      "target": "css=.bg-card:nth-child(2) .inline-flex",
+      "targets": [
+        ["css=.bg-card:nth-child(2) .inline-flex", "css:finder"],
+        ["xpath=//div[@id='radix-«r0»-content-products']/div/div[3]/div[2]/div/div/div[2]/div/button", "xpath:idRelative"],
+        ["xpath=//div[2]/div/div/div[2]/div/button", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "3e2a9da1-4992-455c-a742-99e6158d2f84",
+      "comment": "",
+      "command": "click",
+      "target": "css=.justify-between > .rounded-md",
+      "targets": [
+        ["css=.justify-between > .rounded-md", "css:finder"],
+        ["xpath=//div[@id='radix-«r0»-content-products']/div/div/button", "xpath:idRelative"],
+        ["xpath=//div[3]/div[2]/div/div/button", "xpath:position"],
+        ["xpath=//button[contains(.,'1 items • $11.50')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "30cd4f38-05aa-40da-8bb6-0fecdce4f05e",
+      "comment": "",
+      "command": "assertElementPresent",
+      "target": "css=.flex-1 > .font-medium",
+      "targets": [
+        ["css=.flex-1 > .font-medium", "css:finder"],
+        ["xpath=//div[@id='radix-«r0»-content-cart']/div/div[2]/div/div/div[2]/h3", "xpath:idRelative"],
+        ["xpath=//h3", "xpath:position"],
+        ["xpath=//h3[contains(.,'Hamburguesa Doble')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "142a85cc-f1b6-4a28-86e2-b2b15570c6d6",
+      "comment": "",
+      "command": "type",
+      "target": "id=promo-code",
+      "targets": [
+        ["id=promo-code", "id"],
+        ["css=#promo-code", "css:finder"],
+        ["xpath=//input[@id='promo-code']", "xpath:attributes"],
+        ["xpath=//div[@id='radix-«r0»-content-cart']/div/div[3]/div/div/div/div/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "RAPPI10"
+    }, {
+      "id": "8f1c0ae6-717a-4966-a8a6-c829846782e6",
+      "comment": "",
+      "command": "click",
+      "target": "css=.inline-flex:nth-child(2)",
+      "targets": [
+        ["css=.inline-flex:nth-child(2)", "css:finder"],
+        ["xpath=//div[@id='radix-«r0»-content-cart']/div/div[3]/div/div/div/button", "xpath:idRelative"],
+        ["xpath=//div[3]/div/div[3]/div/div/div/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Aplicar')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "3f9dba11-c551-4165-ae5d-10f8e19a4d45",
+      "comment": "",
+      "command": "assertElementPresent",
+      "target": "css=.text-green-600:nth-child(3)",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "548418cf-0aec-41db-a2e0-b5678719fad4",
+      "comment": "",
+      "command": "click",
+      "target": "css=.bg-primary:nth-child(1)",
+      "targets": [
+        ["css=.bg-primary:nth-child(1)", "css:finder"],
+        ["xpath=//div[@id='radix-«r0»-content-cart']/div/div[4]/div[3]/button", "xpath:idRelative"],
+        ["xpath=//div[4]/div[3]/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Continuar con la dirección')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "e9cc0930-cf62-48f7-8438-c7b3ecc6621b",
+      "comment": "",
+      "command": "click",
+      "target": "css=.rounded-xl:nth-child(2)",
+      "targets": [
+        ["css=.rounded-xl:nth-child(2)", "css:finder"],
+        ["xpath=//div[@id='radix-«r0»-content-address']/div/div[2]/div[2]", "xpath:idRelative"],
+        ["xpath=//div[2]/div[2]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "c3e6ca94-a733-40ac-a645-1286e16a6c2c",
+      "comment": "",
+      "command": "assertElementPresent",
+      "target": "css=.lucide:nth-child(2) > path:nth-child(1)",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "6f02fae2-ae18-40d2-98ca-bc0548e7a4e6",
+      "comment": "",
+      "command": "click",
+      "target": "css=.hover\\3A bg-primary\\/90",
+      "targets": [
+        ["css=.hover\\3A bg-primary\\/90", "css:finder"],
+        ["xpath=//div[@id='radix-«r0»-content-address']/div/div[3]/div/button", "xpath:idRelative"],
+        ["xpath=//div[3]/div/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Continuar con el pago')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "debb52e9-b417-484b-9404-298227e4dec3",
+      "comment": "",
+      "command": "click",
+      "target": "css=.inline-flex:nth-child(3)",
+      "targets": [
+        ["css=.px-3:nth-child(1)", "css:finder"],
+        ["xpath=//div[@id='radix-«r0»-content-payment']/div/div[2]/div/button", "xpath:idRelative"],
+        ["xpath=//div[2]/div/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Usuario nuevo')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "f9b80332-3fa6-4564-9e54-a3aa16f4dc20",
+      "comment": "",
+      "command": "assertText",
+      "target": "css=.text-green-600:nth-child(2)",
+      "targets": [
+        ["css=.text-green-600:nth-child(2)", "css:finder"],
+        ["xpath=//div[@id='radix-«rb»-content-payment']/div/div[4]/div/div/div[2]/span[2]", "xpath:idRelative"],
+        ["xpath=//div[2]/span[2]", "xpath:position"],
+        ["xpath=//span[contains(.,'-$2.00')]", "xpath:innerText"]
+      ],
+      "value": "-$1.73"
+    }, {
+      "id": "9624777f-8ede-4f03-8a6b-61cfd86cf130",
+      "comment": "",
+      "command": "click",
+      "target": "css=.bg-card:nth-child(3) > .p-4",
+      "targets": [
+        ["css=.bg-card:nth-child(3) > .p-4", "css:finder"],
+        ["xpath=//div[@id='radix-«r0»-content-payment']/div/div[3]/div[3]/div", "xpath:idRelative"],
+        ["xpath=//div[3]/div[3]/div", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "dc046544-494f-4fef-ab7c-9a3519599c9c",
+      "comment": "",
+      "command": "click",
+      "target": "css=.px-4",
+      "targets": [
+        ["css=.px-4", "css:finder"],
+        ["xpath=//div[@id='radix-«r0»-content-payment']/div/div[4]/div[2]/button", "xpath:idRelative"],
+        ["xpath=//div[2]/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Realizar pedido')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "c718b4e4-8428-445c-a20a-851b2869d169",
+      "comment": "",
+      "command": "verifyText",
+      "target": "css=.justify-between:nth-child(3) > span:nth-child(2)",
+      "targets": [],
+      "value": "$4.00"
+    }, {
+      "id": "7bd28f06-b85e-4d17-85c0-d5dbd7251e5e",
+      "comment": "",
+      "command": "waitForElementPresent",
+      "target": "css=.inline-flex:nth-child(4)",
+      "targets": [],
+      "value": "30000"
+    }]
+  }, {
+    "id": "ddd3feca-2db8-4f07-a321-cfc8a021572d",
+    "name": "R4 - Código válido - envío local - usuario premium",
+    "commands": [{
+      "id": "5911a75a-8cfb-4215-9df6-149bdb0ccf5f",
+      "comment": "",
+      "command": "open",
+      "target": "https://rappi-payment.onrender.com/payment",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "2d8b843a-4c34-4538-ac4b-14a47707f89a",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1280x720",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "65b562d5-044a-4353-a5ae-ad4ec802f8a6",
+      "comment": "",
+      "command": "waitForElementPresent",
+      "target": "css=.font-bold",
+      "targets": [
+        ["css=.font-bold", "css:finder"],
+        ["xpath=//a/span", "xpath:position"],
+        ["xpath=//span[contains(.,'Rappi')]", "xpath:innerText"]
+      ],
+      "value": "1200000"
+    }, {
+      "id": "1913a949-ffc9-445e-9f91-4461d8c195cb",
+      "comment": "",
+      "command": "click",
+      "target": "css=.bg-card:nth-child(2) > .p-4 .font-semibold",
+      "targets": [
+        ["css=.bg-card:nth-child(2) > .p-4 .font-semibold", "css:finder"],
+        ["xpath=//div[@id='radix-«r0»-content-restaurants']/div/div[2]/div[2]/div/div/div[2]/h3", "xpath:idRelative"],
+        ["xpath=//div[2]/div/div/div[2]/h3", "xpath:position"],
+        ["xpath=//h3[contains(.,'Fast Food Heaven')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "bb564482-1b89-421c-b1e5-6195e7818621",
+      "comment": "",
+      "command": "click",
+      "target": "css=.bg-card:nth-child(2) .inline-flex",
+      "targets": [
+        ["css=.bg-card:nth-child(2) .inline-flex", "css:finder"],
+        ["xpath=//div[@id='radix-«r0»-content-products']/div/div[3]/div[2]/div/div/div[2]/div/button", "xpath:idRelative"],
+        ["xpath=//div[2]/div/div/div[2]/div/button", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "09c45172-4b32-4dc0-85fd-fed420998e99",
+      "comment": "",
+      "command": "click",
+      "target": "css=.justify-between > .rounded-md",
+      "targets": [
+        ["css=.justify-between > .rounded-md", "css:finder"],
+        ["xpath=//div[@id='radix-«r0»-content-products']/div/div/button", "xpath:idRelative"],
+        ["xpath=//div[3]/div[2]/div/div/button", "xpath:position"],
+        ["xpath=//button[contains(.,'1 items • $11.50')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "58662971-2234-4835-a015-aaf4c319f8aa",
+      "comment": "",
+      "command": "assertElementPresent",
+      "target": "css=.flex-1 > .font-medium",
+      "targets": [
+        ["css=.flex-1 > .font-medium", "css:finder"],
+        ["xpath=//div[@id='radix-«r0»-content-cart']/div/div[2]/div/div/div[2]/h3", "xpath:idRelative"],
+        ["xpath=//h3", "xpath:position"],
+        ["xpath=//h3[contains(.,'Hamburguesa Doble')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "b577921a-20bc-4222-91c7-eb2165dde9bf",
+      "comment": "",
+      "command": "type",
+      "target": "id=promo-code",
+      "targets": [
+        ["id=promo-code", "id"],
+        ["css=#promo-code", "css:finder"],
+        ["xpath=//input[@id='promo-code']", "xpath:attributes"],
+        ["xpath=//div[@id='radix-«r0»-content-cart']/div/div[3]/div/div/div/div/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "RAPPI10"
+    }, {
+      "id": "78d54bad-1ea2-42a1-9b55-a9dcb33927af",
+      "comment": "",
+      "command": "click",
+      "target": "css=.inline-flex:nth-child(2)",
+      "targets": [
+        ["css=.inline-flex:nth-child(2)", "css:finder"],
+        ["xpath=//div[@id='radix-«r0»-content-cart']/div/div[3]/div/div/div/button", "xpath:idRelative"],
+        ["xpath=//div[3]/div/div[3]/div/div/div/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Aplicar')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "8e50ac8a-079e-4429-b9d9-6cfd6b1bb4f4",
+      "comment": "",
+      "command": "assertElementPresent",
+      "target": "css=.text-green-600:nth-child(3)",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "dc7f980d-0ebf-4298-b4a1-5de4cbf74bdb",
+      "comment": "",
+      "command": "click",
+      "target": "css=.bg-primary:nth-child(1)",
+      "targets": [
+        ["css=.bg-primary:nth-child(1)", "css:finder"],
+        ["xpath=//div[@id='radix-«r0»-content-cart']/div/div[4]/div[3]/button", "xpath:idRelative"],
+        ["xpath=//div[4]/div[3]/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Continuar con la dirección')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "f41c4f61-4f6a-497a-a2c6-96b5e83674f8",
+      "comment": "",
+      "command": "click",
+      "target": "css=.bg-card:nth-child(1) > .p-4 .text-muted-foreground:nth-child(2)",
+      "targets": [
+        ["css=.bg-card:nth-child(1) > .p-4 .text-muted-foreground:nth-child(2)", "css:finder"],
+        ["xpath=//div[@id='radix-«r0»-content-address']/div/div[2]/div/div/div/div[2]/p", "xpath:idRelative"],
+        ["xpath=//p", "xpath:position"],
+        ["xpath=//p[contains(.,'Calle Principal 123')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "f61f6e50-db65-4485-b7bb-106fb53ac0fb",
+      "comment": "",
+      "command": "assertElementPresent",
+      "target": "css=.lucide:nth-child(2)",
+      "targets": [
+        ["css=.lucide:nth-child(2)", "css:finder"]
+      ],
+      "value": ""
+    }, {
+      "id": "1d8eff7d-b49d-46b7-875b-b916ea7fcb4e",
+      "comment": "",
+      "command": "click",
+      "target": "css=.hover\\3A bg-primary\\/90",
+      "targets": [
+        ["css=.hover\\3A bg-primary\\/90", "css:finder"],
+        ["xpath=//div[@id='radix-«r0»-content-address']/div/div[3]/div/button", "xpath:idRelative"],
+        ["xpath=//div[3]/div/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Continuar con el pago')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "269c3dce-e9cc-4d82-89dc-bfdef7dacc14",
+      "comment": "",
+      "command": "click",
+      "target": "css=.inline-flex:nth-child(3)",
+      "targets": [
+        ["css=.px-3:nth-child(1)", "css:finder"],
+        ["xpath=//div[@id='radix-«r0»-content-payment']/div/div[2]/div/button", "xpath:idRelative"],
+        ["xpath=//div[2]/div/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Usuario nuevo')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "b5306bd6-a8ab-43f0-9988-7cbfb43826df",
+      "comment": "",
+      "command": "assertText",
+      "target": "css=.text-green-600:nth-child(2)",
+      "targets": [
+        ["css=.text-green-600:nth-child(2)", "css:finder"],
+        ["xpath=//div[@id='radix-«rb»-content-payment']/div/div[4]/div/div/div[2]/span[2]", "xpath:idRelative"],
+        ["xpath=//div[2]/span[2]", "xpath:position"],
+        ["xpath=//span[contains(.,'-$2.00')]", "xpath:innerText"]
+      ],
+      "value": "-$1.73"
+    }, {
+      "id": "f06723a6-ee33-4178-8f9e-11f8d4ed3fe1",
+      "comment": "",
+      "command": "click",
+      "target": "css=.bg-card:nth-child(3) > .p-4",
+      "targets": [
+        ["css=.bg-card:nth-child(3) > .p-4", "css:finder"],
+        ["xpath=//div[@id='radix-«r0»-content-payment']/div/div[3]/div[3]/div", "xpath:idRelative"],
+        ["xpath=//div[3]/div[3]/div", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "15d09e5b-68ab-406c-9f22-aa7172e622c0",
+      "comment": "",
+      "command": "click",
+      "target": "css=.px-4",
+      "targets": [
+        ["css=.px-4", "css:finder"],
+        ["xpath=//div[@id='radix-«r0»-content-payment']/div/div[4]/div[2]/button", "xpath:idRelative"],
+        ["xpath=//div[2]/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Realizar pedido')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "79f58249-3ec6-42e0-a6a2-5e33ee78e94e",
+      "comment": "",
+      "command": "assertText",
+      "target": "css=.justify-between:nth-child(3) > span:nth-child(2)",
+      "targets": [
+        ["css=.justify-between:nth-child(3) > span:nth-child(2)", "css:finder"],
+        ["xpath=//div[@id='radix-«r0»-content-confirmation']/div/div[2]/div/div[7]/div[3]/span[2]", "xpath:idRelative"],
+        ["xpath=//div[3]/span[2]", "xpath:position"],
+        ["xpath=//span[contains(.,'$2.50')]", "xpath:innerText"]
+      ],
+      "value": "$2.50"
+    }, {
+      "id": "a7338d82-8e9b-4830-bea5-18baf0a28bb0",
+      "comment": "",
+      "command": "waitForElementPresent",
+      "target": "css=.inline-flex:nth-child(4)",
+      "targets": [],
+      "value": "30000"
+    }]
+  }, {
+    "id": "10d14792-693a-48f4-a337-bacfafc36cfa",
+    "name": "R7 - Código válido - envío local - usuario regular",
+    "commands": [{
+      "id": "172eefa8-62ab-43ae-ab23-7c3d8fa49fd7",
+      "comment": "",
+      "command": "open",
+      "target": "https://rappi-payment.onrender.com/payment",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "53270b7c-7290-4ada-9240-dfc13dee0738",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1280x720",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "ce2835fd-9658-461d-a055-7d2415dd57c5",
+      "comment": "",
+      "command": "waitForElementPresent",
+      "target": "css=.font-bold",
+      "targets": [
+        ["css=.font-bold", "css:finder"],
+        ["xpath=//a/span", "xpath:position"],
+        ["xpath=//span[contains(.,'Rappi')]", "xpath:innerText"]
+      ],
+      "value": "1200000"
+    }, {
+      "id": "51a5555d-522a-4233-ae84-b1dd0a8c346f",
+      "comment": "",
+      "command": "click",
+      "target": "css=.bg-card:nth-child(2) > .p-4 .font-semibold",
+      "targets": [
+        ["css=.bg-card:nth-child(2) > .p-4 .font-semibold", "css:finder"],
+        ["xpath=//div[@id='radix-«r0»-content-restaurants']/div/div[2]/div[2]/div/div/div[2]/h3", "xpath:idRelative"],
+        ["xpath=//div[2]/div/div/div[2]/h3", "xpath:position"],
+        ["xpath=//h3[contains(.,'Fast Food Heaven')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "0e4f7247-47d1-45ed-a49d-d63ea5b7de22",
+      "comment": "",
+      "command": "click",
+      "target": "css=.bg-card:nth-child(2) .inline-flex",
+      "targets": [
+        ["css=.bg-card:nth-child(2) .inline-flex", "css:finder"],
+        ["xpath=//div[@id='radix-«r0»-content-products']/div/div[3]/div[2]/div/div/div[2]/div/button", "xpath:idRelative"],
+        ["xpath=//div[2]/div/div/div[2]/div/button", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "34082c7e-782f-4be2-b23e-25614a90be7f",
+      "comment": "",
+      "command": "click",
+      "target": "css=.justify-between > .rounded-md",
+      "targets": [
+        ["css=.justify-between > .rounded-md", "css:finder"],
+        ["xpath=//div[@id='radix-«r0»-content-products']/div/div/button", "xpath:idRelative"],
+        ["xpath=//div[3]/div[2]/div/div/button", "xpath:position"],
+        ["xpath=//button[contains(.,'1 items • $11.50')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "c1b70894-3c6e-4111-a1d9-d086d48d7103",
+      "comment": "",
+      "command": "assertElementPresent",
+      "target": "css=.flex-1 > .font-medium",
+      "targets": [
+        ["css=.flex-1 > .font-medium", "css:finder"],
+        ["xpath=//div[@id='radix-«r0»-content-cart']/div/div[2]/div/div/div[2]/h3", "xpath:idRelative"],
+        ["xpath=//h3", "xpath:position"],
+        ["xpath=//h3[contains(.,'Hamburguesa Doble')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "a97ecd89-9687-4446-83d6-3b15cce40ab6",
+      "comment": "",
+      "command": "type",
+      "target": "id=promo-code",
+      "targets": [
+        ["id=promo-code", "id"],
+        ["css=#promo-code", "css:finder"],
+        ["xpath=//input[@id='promo-code']", "xpath:attributes"],
+        ["xpath=//div[@id='radix-«r0»-content-cart']/div/div[3]/div/div/div/div/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "RAPPI10"
+    }, {
+      "id": "f8d258d3-d0fb-4baa-9c9b-c06ccbb52e2f",
+      "comment": "",
+      "command": "click",
+      "target": "css=.inline-flex:nth-child(2)",
+      "targets": [
+        ["css=.inline-flex:nth-child(2)", "css:finder"],
+        ["xpath=//div[@id='radix-«r0»-content-cart']/div/div[3]/div/div/div/button", "xpath:idRelative"],
+        ["xpath=//div[3]/div/div[3]/div/div/div/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Aplicar')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "427b73db-c5a0-455b-806f-5b0b0b202e07",
+      "comment": "",
+      "command": "assertElementPresent",
+      "target": "css=.text-green-600:nth-child(3)",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "e57a6da1-0c67-437f-a56a-3143406e0a8e",
+      "comment": "",
+      "command": "click",
+      "target": "css=.bg-primary:nth-child(1)",
+      "targets": [
+        ["css=.bg-primary:nth-child(1)", "css:finder"],
+        ["xpath=//div[@id='radix-«r0»-content-cart']/div/div[4]/div[3]/button", "xpath:idRelative"],
+        ["xpath=//div[4]/div[3]/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Continuar con la dirección')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "073803e1-4204-43d7-9e7e-984b419e7cee",
+      "comment": "",
+      "command": "click",
+      "target": "css=.bg-card:nth-child(1) > .p-4 .text-muted-foreground:nth-child(2)",
+      "targets": [
+        ["css=.bg-card:nth-child(1) > .p-4 .text-muted-foreground:nth-child(2)", "css:finder"],
+        ["xpath=//div[@id='radix-«r0»-content-address']/div/div[2]/div/div/div/div[2]/p", "xpath:idRelative"],
+        ["xpath=//p", "xpath:position"],
+        ["xpath=//p[contains(.,'Calle Principal 123')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "22ee41aa-fa6d-47bd-a142-2b8cbfbaed81",
+      "comment": "",
+      "command": "assertElementPresent",
+      "target": "css=.lucide:nth-child(2)",
+      "targets": [
+        ["css=.lucide:nth-child(2)", "css:finder"]
+      ],
+      "value": ""
+    }, {
+      "id": "51da94cc-76f5-437e-9f05-c640620b27c6",
+      "comment": "",
+      "command": "click",
+      "target": "css=.hover\\3A bg-primary\\/90",
+      "targets": [
+        ["css=.hover\\3A bg-primary\\/90", "css:finder"],
+        ["xpath=//div[@id='radix-«r0»-content-address']/div/div[3]/div/button", "xpath:idRelative"],
+        ["xpath=//div[3]/div/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Continuar con el pago')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "00be9904-8eef-4181-b748-47000921c988",
+      "comment": "",
+      "command": "click",
+      "target": "css=.inline-flex:nth-child(2)",
+      "targets": [
+        ["css=.px-3:nth-child(1)", "css:finder"],
+        ["xpath=//div[@id='radix-«r0»-content-payment']/div/div[2]/div/button", "xpath:idRelative"],
+        ["xpath=//div[2]/div/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Usuario nuevo')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "6b3f59f2-c971-432c-822a-7dd88ae4eaeb",
+      "comment": "",
+      "command": "assertText",
+      "target": "css=.text-green-600:nth-child(2)",
+      "targets": [
+        ["css=.text-green-600:nth-child(2)", "css:finder"],
+        ["xpath=//div[@id='radix-«rb»-content-payment']/div/div[4]/div/div/div[2]/span[2]", "xpath:idRelative"],
+        ["xpath=//div[2]/span[2]", "xpath:position"],
+        ["xpath=//span[contains(.,'-$2.00')]", "xpath:innerText"]
+      ],
+      "value": "-$1.15"
+    }, {
+      "id": "bbace5d8-1f96-465c-b52a-83925959c5e1",
+      "comment": "",
+      "command": "click",
+      "target": "css=.bg-card:nth-child(3) > .p-4",
+      "targets": [
+        ["css=.bg-card:nth-child(3) > .p-4", "css:finder"],
+        ["xpath=//div[@id='radix-«r0»-content-payment']/div/div[3]/div[3]/div", "xpath:idRelative"],
+        ["xpath=//div[3]/div[3]/div", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "478fc2aa-814b-47a9-89e5-d60512016f65",
+      "comment": "",
+      "command": "click",
+      "target": "css=.px-4",
+      "targets": [
+        ["css=.px-4", "css:finder"],
+        ["xpath=//div[@id='radix-«r0»-content-payment']/div/div[4]/div[2]/button", "xpath:idRelative"],
+        ["xpath=//div[2]/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Realizar pedido')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "cdb5992c-690d-447e-b30a-5e48e8c1eddb",
+      "comment": "",
+      "command": "assertText",
+      "target": "css=.justify-between:nth-child(3) > span:nth-child(2)",
+      "targets": [
+        ["css=.justify-between:nth-child(3) > span:nth-child(2)", "css:finder"],
+        ["xpath=//div[@id='radix-«r0»-content-confirmation']/div/div[2]/div/div[7]/div[3]/span[2]", "xpath:idRelative"],
+        ["xpath=//div[3]/span[2]", "xpath:position"],
+        ["xpath=//span[contains(.,'$2.50')]", "xpath:innerText"]
+      ],
+      "value": "$2.50"
+    }, {
+      "id": "0d0457a2-907e-4a08-827c-af4c9afd8014",
+      "comment": "",
+      "command": "waitForElementPresent",
+      "target": "css=.inline-flex:nth-child(4)",
+      "targets": [],
+      "value": "30000"
+    }]
+  }, {
+    "id": "cb54b60c-b1f5-41a9-b86e-da73cda4206c",
+    "name": "R15 - Código inválido - envío largo - usuario premium",
+    "commands": [{
+      "id": "e26a1557-86ac-40b6-b24e-43bbb4e49522",
+      "comment": "",
+      "command": "open",
+      "target": "https://rappi-payment.onrender.com/payment",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "a95d0f76-35a2-4710-a955-207a775f190f",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1280x720",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "d2fc4b6a-5043-4cec-8c32-47e48833e4f6",
+      "comment": "",
+      "command": "waitForElementPresent",
+      "target": "css=.font-bold",
+      "targets": [
+        ["css=.font-bold", "css:finder"],
+        ["xpath=//a/span", "xpath:position"],
+        ["xpath=//span[contains(.,'Rappi')]", "xpath:innerText"]
+      ],
+      "value": "1200000"
+    }, {
+      "id": "ebdc3367-e84b-425d-b763-9695f9d1e42b",
+      "comment": "",
+      "command": "click",
+      "target": "css=.bg-card:nth-child(2) > .p-4 .font-semibold",
+      "targets": [
+        ["css=.bg-card:nth-child(2) > .p-4 .font-semibold", "css:finder"],
+        ["xpath=//div[@id='radix-«r0»-content-restaurants']/div/div[2]/div[2]/div/div/div[2]/h3", "xpath:idRelative"],
+        ["xpath=//div[2]/div/div/div[2]/h3", "xpath:position"],
+        ["xpath=//h3[contains(.,'Fast Food Heaven')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "906b1de1-dc30-49e4-b6aa-dd28f165a25e",
+      "comment": "",
+      "command": "click",
+      "target": "css=.bg-card:nth-child(2) .inline-flex",
+      "targets": [
+        ["css=.bg-card:nth-child(2) .inline-flex", "css:finder"],
+        ["xpath=//div[@id='radix-«r0»-content-products']/div/div[3]/div[2]/div/div/div[2]/div/button", "xpath:idRelative"],
+        ["xpath=//div[2]/div/div/div[2]/div/button", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "6a1e2a14-a13b-4a79-b87d-92848c3e0202",
+      "comment": "",
+      "command": "click",
+      "target": "css=.justify-between > .rounded-md",
+      "targets": [
+        ["css=.justify-between > .rounded-md", "css:finder"],
+        ["xpath=//div[@id='radix-«r0»-content-products']/div/div/button", "xpath:idRelative"],
+        ["xpath=//div[3]/div[2]/div/div/button", "xpath:position"],
+        ["xpath=//button[contains(.,'1 items • $11.50')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "2dc1e93b-7e42-44d2-9078-322cd76eb992",
+      "comment": "",
+      "command": "assertElementPresent",
+      "target": "css=.flex-1 > .font-medium",
+      "targets": [
+        ["css=.flex-1 > .font-medium", "css:finder"],
+        ["xpath=//div[@id='radix-«r0»-content-cart']/div/div[2]/div/div/div[2]/h3", "xpath:idRelative"],
+        ["xpath=//h3", "xpath:position"],
+        ["xpath=//h3[contains(.,'Hamburguesa Doble')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "fdb525b9-0ba5-442c-ad94-8b8b2ee98587",
+      "comment": "",
+      "command": "assertElementNotPresent",
+      "target": "css=.text-green-600:nth-child(3)",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "e42e8b76-0ff8-41f7-b342-634f280a29ca",
+      "comment": "",
+      "command": "click",
+      "target": "css=.bg-primary:nth-child(1)",
+      "targets": [
+        ["css=.bg-primary:nth-child(1)", "css:finder"],
+        ["xpath=//div[@id='radix-«r0»-content-cart']/div/div[4]/div[3]/button", "xpath:idRelative"],
+        ["xpath=//div[4]/div[3]/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Continuar con la dirección')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "a0e17405-e35f-41c8-bf1d-1d132c8b8976",
+      "comment": "",
+      "command": "click",
+      "target": "css=.cursor-pointer:nth-child(3)",
+      "targets": [
+        ["css=.cursor-pointer:nth-child(3)", "css:finder"],
+        ["xpath=//div[@id='radix-«r0»-content-address']/div/div[2]/div[3]", "xpath:idRelative"],
+        ["xpath=//div[2]/div[3]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "a2e41680-8515-4add-aead-6ab5029ef3c5",
+      "comment": "",
+      "command": "assertElementPresent",
+      "target": "css=.lucide:nth-child(2)",
+      "targets": [
+        ["css=.lucide:nth-child(2)", "css:finder"]
+      ],
+      "value": ""
+    }, {
+      "id": "50b1e67f-200a-4e09-b1cf-4f8609711ae6",
+      "comment": "",
+      "command": "click",
+      "target": "css=.hover\\3A bg-primary\\/90",
+      "targets": [
+        ["css=.hover\\3A bg-primary\\/90", "css:finder"],
+        ["xpath=//div[@id='radix-«r0»-content-address']/div/div[3]/div/button", "xpath:idRelative"],
+        ["xpath=//div[3]/div/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Continuar con el pago')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "0ed242fa-8363-45c3-aa8f-c7e5a4f623f1",
+      "comment": "",
+      "command": "click",
+      "target": "css=.px-3:nth-child(3)",
+      "targets": [
+        ["css=.px-3:nth-child(1)", "css:finder"],
+        ["xpath=//div[@id='radix-«r0»-content-payment']/div/div[2]/div/button", "xpath:idRelative"],
+        ["xpath=//div[2]/div/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Usuario nuevo')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "bdfbbb78-d234-41a8-b577-9c3b8b2cb6c1",
+      "comment": "",
+      "command": "assertText",
+      "target": "css=.text-green-600:nth-child(2)",
+      "targets": [
+        ["css=.text-green-600:nth-child(2)", "css:finder"],
+        ["xpath=//div[@id='radix-«rb»-content-payment']/div/div[4]/div/div/div[2]/span[2]", "xpath:idRelative"],
+        ["xpath=//div[2]/span[2]", "xpath:position"],
+        ["xpath=//span[contains(.,'-$2.00')]", "xpath:innerText"]
+      ],
+      "value": "-$0.58"
+    }, {
+      "id": "c8c00e3c-aae6-4a51-96cb-fefee3350b66",
+      "comment": "",
+      "command": "click",
+      "target": "css=.bg-card:nth-child(3) > .p-4",
+      "targets": [
+        ["css=.bg-card:nth-child(3) > .p-4", "css:finder"],
+        ["xpath=//div[@id='radix-«r0»-content-payment']/div/div[3]/div[3]/div", "xpath:idRelative"],
+        ["xpath=//div[3]/div[3]/div", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "b1fb08fb-f3ce-4006-84a9-76ec405db4cc",
+      "comment": "",
+      "command": "click",
+      "target": "css=.px-4",
+      "targets": [
+        ["css=.px-4", "css:finder"],
+        ["xpath=//div[@id='radix-«r0»-content-payment']/div/div[4]/div[2]/button", "xpath:idRelative"],
+        ["xpath=//div[2]/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Realizar pedido')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "0c3c0702-e42e-46fd-8d3d-707d966ba40e",
+      "comment": "",
+      "command": "verifyText",
+      "target": "css=.justify-between:nth-child(3) > span:nth-child(2)",
+      "targets": [],
+      "value": "$6.00"
+    }, {
+      "id": "48c6a663-1b73-4178-bfe2-2e122790535d",
+      "comment": "",
+      "command": "waitForElementPresent",
+      "target": "css=.inline-flex:nth-child(4)",
+      "targets": [],
+      "value": "30000"
+    }]
+  }, {
+    "id": "662abcc4-5a7d-4f32-958d-43157760b9ea",
+    "name": "R18 - Código inválido - envío largo - usuario regular",
+    "commands": [{
+      "id": "16b231dd-35bc-430c-a1d8-401c62886b70",
+      "comment": "",
+      "command": "open",
+      "target": "https://rappi-payment.onrender.com/payment",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "1585c81c-e319-4f56-ac1b-77d103e002c1",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1280x720",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "32cf5fd8-b9e1-4d7b-8739-b50dfbe21bed",
+      "comment": "",
+      "command": "waitForElementPresent",
+      "target": "css=.font-bold",
+      "targets": [
+        ["css=.font-bold", "css:finder"],
+        ["xpath=//a/span", "xpath:position"],
+        ["xpath=//span[contains(.,'Rappi')]", "xpath:innerText"]
+      ],
+      "value": "1200000"
+    }, {
+      "id": "c5469137-ac2e-4e3b-9dcd-e34bf2cad9b7",
+      "comment": "",
+      "command": "click",
+      "target": "css=.bg-card:nth-child(2) > .p-4 .font-semibold",
+      "targets": [
+        ["css=.bg-card:nth-child(2) > .p-4 .font-semibold", "css:finder"],
+        ["xpath=//div[@id='radix-«r0»-content-restaurants']/div/div[2]/div[2]/div/div/div[2]/h3", "xpath:idRelative"],
+        ["xpath=//div[2]/div/div/div[2]/h3", "xpath:position"],
+        ["xpath=//h3[contains(.,'Fast Food Heaven')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "ea867ba5-c84e-43e4-bae5-8cc3e1c5dd1f",
+      "comment": "",
+      "command": "click",
+      "target": "css=.bg-card:nth-child(2) .inline-flex",
+      "targets": [
+        ["css=.bg-card:nth-child(2) .inline-flex", "css:finder"],
+        ["xpath=//div[@id='radix-«r0»-content-products']/div/div[3]/div[2]/div/div/div[2]/div/button", "xpath:idRelative"],
+        ["xpath=//div[2]/div/div/div[2]/div/button", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "23fe37e5-3335-4532-85aa-1041d2af2f24",
+      "comment": "",
+      "command": "click",
+      "target": "css=.justify-between > .rounded-md",
+      "targets": [
+        ["css=.justify-between > .rounded-md", "css:finder"],
+        ["xpath=//div[@id='radix-«r0»-content-products']/div/div/button", "xpath:idRelative"],
+        ["xpath=//div[3]/div[2]/div/div/button", "xpath:position"],
+        ["xpath=//button[contains(.,'1 items • $11.50')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "4f9cedf1-1150-482a-959c-b6f2c0f85393",
+      "comment": "",
+      "command": "assertElementPresent",
+      "target": "css=.flex-1 > .font-medium",
+      "targets": [
+        ["css=.flex-1 > .font-medium", "css:finder"],
+        ["xpath=//div[@id='radix-«r0»-content-cart']/div/div[2]/div/div/div[2]/h3", "xpath:idRelative"],
+        ["xpath=//h3", "xpath:position"],
+        ["xpath=//h3[contains(.,'Hamburguesa Doble')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "77674c97-d2cf-46bc-bf01-1c42de7858f3",
+      "comment": "",
+      "command": "assertElementNotPresent",
+      "target": "css=.text-green-600:nth-child(3)",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "b192795e-46d8-4bee-9775-8bf222f75e5c",
+      "comment": "",
+      "command": "click",
+      "target": "css=.bg-primary:nth-child(1)",
+      "targets": [
+        ["css=.bg-primary:nth-child(1)", "css:finder"],
+        ["xpath=//div[@id='radix-«r0»-content-cart']/div/div[4]/div[3]/button", "xpath:idRelative"],
+        ["xpath=//div[4]/div[3]/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Continuar con la dirección')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "20467fe1-ecaa-47b9-99f5-821129d7a96a",
+      "comment": "",
+      "command": "click",
+      "target": "css=.cursor-pointer:nth-child(3)",
+      "targets": [
+        ["css=.cursor-pointer:nth-child(3)", "css:finder"],
+        ["xpath=//div[@id='radix-«r0»-content-address']/div/div[2]/div[3]", "xpath:idRelative"],
+        ["xpath=//div[2]/div[3]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "9caa343a-c04e-4f24-9bfa-9005a2f8fb01",
+      "comment": "",
+      "command": "assertElementPresent",
+      "target": "css=.lucide:nth-child(2)",
+      "targets": [
+        ["css=.lucide:nth-child(2)", "css:finder"]
+      ],
+      "value": ""
+    }, {
+      "id": "9b1d8d83-bedc-4ee8-9a04-4df29df7a185",
+      "comment": "",
+      "command": "click",
+      "target": "css=.hover\\3A bg-primary\\/90",
+      "targets": [
+        ["css=.hover\\3A bg-primary\\/90", "css:finder"],
+        ["xpath=//div[@id='radix-«r0»-content-address']/div/div[3]/div/button", "xpath:idRelative"],
+        ["xpath=//div[3]/div/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Continuar con el pago')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "110a8999-092f-4563-a0ca-47bd375815d2",
+      "comment": "",
+      "command": "click",
+      "target": "css=.px-3:nth-child(2)",
+      "targets": [
+        ["css=.px-3:nth-child(1)", "css:finder"],
+        ["xpath=//div[@id='radix-«r0»-content-payment']/div/div[2]/div/button", "xpath:idRelative"],
+        ["xpath=//div[2]/div/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Usuario nuevo')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "0ceeb8da-7d55-4cb0-a4ad-a1c16d38cb37",
+      "comment": "",
+      "command": "assertElementNotPresent",
+      "target": "css=.text-green-600:nth-child(2)",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "f7ee0a4a-5df6-4057-93f3-a04c8aab6bfa",
+      "comment": "",
+      "command": "click",
+      "target": "css=.bg-card:nth-child(3) > .p-4",
+      "targets": [
+        ["css=.bg-card:nth-child(3) > .p-4", "css:finder"],
+        ["xpath=//div[@id='radix-«r0»-content-payment']/div/div[3]/div[3]/div", "xpath:idRelative"],
+        ["xpath=//div[3]/div[3]/div", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "569945e5-b5ff-46b3-906d-e1c6037fb9ef",
+      "comment": "",
+      "command": "click",
+      "target": "css=.px-4",
+      "targets": [
+        ["css=.px-4", "css:finder"],
+        ["xpath=//div[@id='radix-«r0»-content-payment']/div/div[4]/div[2]/button", "xpath:idRelative"],
+        ["xpath=//div[2]/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Realizar pedido')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "f31f96cf-9595-4004-9002-4fc653ecb350",
+      "comment": "",
+      "command": "verifyText",
+      "target": "css=.justify-between:nth-child(2) > span:nth-child(2)",
+      "targets": [],
+      "value": "$6.00"
+    }, {
+      "id": "d6664596-60b4-4128-87ab-c99ab97fab7a",
+      "comment": "",
+      "command": "waitForElementPresent",
+      "target": "css=.inline-flex:nth-child(4)",
+      "targets": [],
+      "value": "30000"
+    }]
+  }, {
+    "id": "2b881c0f-16b1-4be1-a6dd-928ef179ec99",
+    "name": "R14 - Código inválido - envío medio - usuario premium",
+    "commands": [{
+      "id": "bddb38f7-4d20-4d81-a1a5-aed2e901287b",
+      "comment": "",
+      "command": "open",
+      "target": "https://rappi-payment.onrender.com/payment",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "ca89459a-5ffa-48b8-9c0a-89044223ef23",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1280x720",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "f8ad7d85-0a7d-4a01-a549-19b141f8f28d",
+      "comment": "",
+      "command": "waitForElementPresent",
+      "target": "css=.font-bold",
+      "targets": [
+        ["css=.font-bold", "css:finder"],
+        ["xpath=//a/span", "xpath:position"],
+        ["xpath=//span[contains(.,'Rappi')]", "xpath:innerText"]
+      ],
+      "value": "1200000"
+    }, {
+      "id": "8529d958-35e2-40fb-900f-0dc284600504",
+      "comment": "",
+      "command": "click",
+      "target": "css=.bg-card:nth-child(2) > .p-4 .font-semibold",
+      "targets": [
+        ["css=.bg-card:nth-child(2) > .p-4 .font-semibold", "css:finder"],
+        ["xpath=//div[@id='radix-«r0»-content-restaurants']/div/div[2]/div[2]/div/div/div[2]/h3", "xpath:idRelative"],
+        ["xpath=//div[2]/div/div/div[2]/h3", "xpath:position"],
+        ["xpath=//h3[contains(.,'Fast Food Heaven')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "41c30c18-ce72-4bfe-a5f7-7653814ea9d1",
+      "comment": "",
+      "command": "click",
+      "target": "css=.bg-card:nth-child(2) .inline-flex",
+      "targets": [
+        ["css=.bg-card:nth-child(2) .inline-flex", "css:finder"],
+        ["xpath=//div[@id='radix-«r0»-content-products']/div/div[3]/div[2]/div/div/div[2]/div/button", "xpath:idRelative"],
+        ["xpath=//div[2]/div/div/div[2]/div/button", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "4f607340-a77f-4ac9-9f05-b9d31dc1e221",
+      "comment": "",
+      "command": "click",
+      "target": "css=.justify-between > .rounded-md",
+      "targets": [
+        ["css=.justify-between > .rounded-md", "css:finder"],
+        ["xpath=//div[@id='radix-«r0»-content-products']/div/div/button", "xpath:idRelative"],
+        ["xpath=//div[3]/div[2]/div/div/button", "xpath:position"],
+        ["xpath=//button[contains(.,'1 items • $11.50')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "80207412-fc4c-42f0-bea8-74c0ead37f2e",
+      "comment": "",
+      "command": "assertElementPresent",
+      "target": "css=.flex-1 > .font-medium",
+      "targets": [
+        ["css=.flex-1 > .font-medium", "css:finder"],
+        ["xpath=//div[@id='radix-«r0»-content-cart']/div/div[2]/div/div/div[2]/h3", "xpath:idRelative"],
+        ["xpath=//h3", "xpath:position"],
+        ["xpath=//h3[contains(.,'Hamburguesa Doble')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "25acf573-8bdd-48d9-b928-90a780448dc4",
+      "comment": "",
+      "command": "assertElementNotPresent",
+      "target": "css=.text-green-600:nth-child(3)",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "49ec8691-d40d-486d-8751-1d9f5e23df59",
+      "comment": "",
+      "command": "click",
+      "target": "css=.bg-primary:nth-child(1)",
+      "targets": [
+        ["css=.bg-primary:nth-child(1)", "css:finder"],
+        ["xpath=//div[@id='radix-«r0»-content-cart']/div/div[4]/div[3]/button", "xpath:idRelative"],
+        ["xpath=//div[4]/div[3]/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Continuar con la dirección')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "f05a264c-2035-4450-9d2d-b6ae3268bca7",
+      "comment": "",
+      "command": "click",
+      "target": "css=.rounded-xl:nth-child(2)",
+      "targets": [
+        ["css=.rounded-xl:nth-child(2)", "css:finder"],
+        ["xpath=//div[@id='radix-«r0»-content-address']/div/div[2]/div[2]", "xpath:idRelative"],
+        ["xpath=//div[2]/div[2]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "6de63810-a04e-4f7b-b9b3-f601a992c22a",
+      "comment": "",
+      "command": "assertElementPresent",
+      "target": "css=.lucide:nth-child(2) > path:nth-child(1)",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "cc9435ef-3a15-42a7-bbdb-51c53c2729f4",
+      "comment": "",
+      "command": "click",
+      "target": "css=.hover\\3A bg-primary\\/90",
+      "targets": [
+        ["css=.hover\\3A bg-primary\\/90", "css:finder"],
+        ["xpath=//div[@id='radix-«r0»-content-address']/div/div[3]/div/button", "xpath:idRelative"],
+        ["xpath=//div[3]/div/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Continuar con el pago')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "87e146dd-10d3-4938-bfc6-16a659044cf0",
+      "comment": "",
+      "command": "click",
+      "target": "css=.px-3:nth-child(3)",
+      "targets": [
+        ["css=.px-3:nth-child(1)", "css:finder"],
+        ["xpath=//div[@id='radix-«r0»-content-payment']/div/div[2]/div/button", "xpath:idRelative"],
+        ["xpath=//div[2]/div/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Usuario nuevo')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "c02fbb84-955c-490f-8912-b89b61530ca2",
+      "comment": "",
+      "command": "assertText",
+      "target": "css=.text-green-600:nth-child(2)",
+      "targets": [
+        ["css=.text-green-600:nth-child(2)", "css:finder"],
+        ["xpath=//div[@id='radix-«rb»-content-payment']/div/div[4]/div/div/div[2]/span[2]", "xpath:idRelative"],
+        ["xpath=//div[2]/span[2]", "xpath:position"],
+        ["xpath=//span[contains(.,'-$2.00')]", "xpath:innerText"]
+      ],
+      "value": "-$0.58"
+    }, {
+      "id": "8eb78dc2-16b1-4ab0-a496-f060ed9c896a",
+      "comment": "",
+      "command": "click",
+      "target": "css=.bg-card:nth-child(3) > .p-4",
+      "targets": [
+        ["css=.bg-card:nth-child(3) > .p-4", "css:finder"],
+        ["xpath=//div[@id='radix-«r0»-content-payment']/div/div[3]/div[3]/div", "xpath:idRelative"],
+        ["xpath=//div[3]/div[3]/div", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "09493539-723a-440b-840d-9fe2ed8433ed",
+      "comment": "",
+      "command": "click",
+      "target": "css=.px-4",
+      "targets": [
+        ["css=.px-4", "css:finder"],
+        ["xpath=//div[@id='radix-«r0»-content-payment']/div/div[4]/div[2]/button", "xpath:idRelative"],
+        ["xpath=//div[2]/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Realizar pedido')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "ce2d336d-4db5-4ffe-a346-c808b5aeedee",
+      "comment": "",
+      "command": "verifyText",
+      "target": "css=.justify-between:nth-child(3) > span:nth-child(2)",
+      "targets": [],
+      "value": "$4.00"
+    }, {
+      "id": "12d9f5cf-fbce-46d8-9b37-f4055ba8bfee",
+      "comment": "",
+      "command": "waitForElementPresent",
+      "target": "css=.inline-flex:nth-child(4)",
+      "targets": [],
+      "value": "30000"
+    }]
+  }, {
+    "id": "10fcaf01-fec8-478b-b6b0-4189c8919805",
+    "name": "R17 - Código inválido - envío medio - usuario regular",
+    "commands": [{
+      "id": "241b24e8-9f61-4c54-ba72-20655234525f",
+      "comment": "",
+      "command": "open",
+      "target": "https://rappi-payment.onrender.com/payment",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "a365bb48-1fa3-4633-ba7a-aa4afcaf55e4",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1280x720",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "08d5e14f-933b-457a-a533-14f3836b5883",
+      "comment": "",
+      "command": "waitForElementPresent",
+      "target": "css=.font-bold",
+      "targets": [
+        ["css=.font-bold", "css:finder"],
+        ["xpath=//a/span", "xpath:position"],
+        ["xpath=//span[contains(.,'Rappi')]", "xpath:innerText"]
+      ],
+      "value": "1200000"
+    }, {
+      "id": "9a061ea4-24e0-4bea-add9-2db6f3f3d8d7",
+      "comment": "",
+      "command": "click",
+      "target": "css=.bg-card:nth-child(2) > .p-4 .font-semibold",
+      "targets": [
+        ["css=.bg-card:nth-child(2) > .p-4 .font-semibold", "css:finder"],
+        ["xpath=//div[@id='radix-«r0»-content-restaurants']/div/div[2]/div[2]/div/div/div[2]/h3", "xpath:idRelative"],
+        ["xpath=//div[2]/div/div/div[2]/h3", "xpath:position"],
+        ["xpath=//h3[contains(.,'Fast Food Heaven')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "4ecfec75-bf44-4b9e-9eb0-be849003fe16",
+      "comment": "",
+      "command": "click",
+      "target": "css=.bg-card:nth-child(2) .inline-flex",
+      "targets": [
+        ["css=.bg-card:nth-child(2) .inline-flex", "css:finder"],
+        ["xpath=//div[@id='radix-«r0»-content-products']/div/div[3]/div[2]/div/div/div[2]/div/button", "xpath:idRelative"],
+        ["xpath=//div[2]/div/div/div[2]/div/button", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "04600a6a-393d-45c2-a768-8ed9d6c8ab33",
+      "comment": "",
+      "command": "click",
+      "target": "css=.justify-between > .rounded-md",
+      "targets": [
+        ["css=.justify-between > .rounded-md", "css:finder"],
+        ["xpath=//div[@id='radix-«r0»-content-products']/div/div/button", "xpath:idRelative"],
+        ["xpath=//div[3]/div[2]/div/div/button", "xpath:position"],
+        ["xpath=//button[contains(.,'1 items • $11.50')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "5dd01314-f99c-45d4-b408-f4f2837d810c",
+      "comment": "",
+      "command": "assertElementPresent",
+      "target": "css=.flex-1 > .font-medium",
+      "targets": [
+        ["css=.flex-1 > .font-medium", "css:finder"],
+        ["xpath=//div[@id='radix-«r0»-content-cart']/div/div[2]/div/div/div[2]/h3", "xpath:idRelative"],
+        ["xpath=//h3", "xpath:position"],
+        ["xpath=//h3[contains(.,'Hamburguesa Doble')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "6c26a583-0903-422b-97c9-bd99e940dbdf",
+      "comment": "",
+      "command": "assertElementNotPresent",
+      "target": "css=.text-green-600:nth-child(3)",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "77a3e4ec-f516-4ca5-bf28-1e222a314efc",
+      "comment": "",
+      "command": "click",
+      "target": "css=.bg-primary:nth-child(1)",
+      "targets": [
+        ["css=.bg-primary:nth-child(1)", "css:finder"],
+        ["xpath=//div[@id='radix-«r0»-content-cart']/div/div[4]/div[3]/button", "xpath:idRelative"],
+        ["xpath=//div[4]/div[3]/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Continuar con la dirección')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "0147f9ec-0e34-4155-96ae-f827953173fb",
+      "comment": "",
+      "command": "click",
+      "target": "css=.rounded-xl:nth-child(2)",
+      "targets": [
+        ["css=.rounded-xl:nth-child(2)", "css:finder"],
+        ["xpath=//div[@id='radix-«r0»-content-address']/div/div[2]/div[2]", "xpath:idRelative"],
+        ["xpath=//div[2]/div[2]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "e531ff79-f9d2-4e26-befb-91776a190fca",
+      "comment": "",
+      "command": "assertElementPresent",
+      "target": "css=.lucide:nth-child(2) > path:nth-child(1)",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "36774d9a-475b-4e4c-9d94-6a31f147cea7",
+      "comment": "",
+      "command": "click",
+      "target": "css=.hover\\3A bg-primary\\/90",
+      "targets": [
+        ["css=.hover\\3A bg-primary\\/90", "css:finder"],
+        ["xpath=//div[@id='radix-«r0»-content-address']/div/div[3]/div/button", "xpath:idRelative"],
+        ["xpath=//div[3]/div/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Continuar con el pago')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "f0df39ed-9dbc-4704-9f07-d515e11fce88",
+      "comment": "",
+      "command": "click",
+      "target": "css=.px-3:nth-child(2)",
+      "targets": [
+        ["css=.px-3:nth-child(1)", "css:finder"],
+        ["xpath=//div[@id='radix-«r0»-content-payment']/div/div[2]/div/button", "xpath:idRelative"],
+        ["xpath=//div[2]/div/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Usuario nuevo')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "fbdd6223-f65c-4b9a-93b8-1570ad5af03e",
+      "comment": "",
+      "command": "assertElementNotPresent",
+      "target": "css=.text-green-600:nth-child(2)",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "7ef38fc8-5b73-43f9-8408-404131564049",
+      "comment": "",
+      "command": "click",
+      "target": "css=.bg-card:nth-child(3) > .p-4",
+      "targets": [
+        ["css=.bg-card:nth-child(3) > .p-4", "css:finder"],
+        ["xpath=//div[@id='radix-«r0»-content-payment']/div/div[3]/div[3]/div", "xpath:idRelative"],
+        ["xpath=//div[3]/div[3]/div", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "7bc50027-139f-4fc7-a15a-4730f0b09d77",
+      "comment": "",
+      "command": "click",
+      "target": "css=.px-4",
+      "targets": [
+        ["css=.px-4", "css:finder"],
+        ["xpath=//div[@id='radix-«r0»-content-payment']/div/div[4]/div[2]/button", "xpath:idRelative"],
+        ["xpath=//div[2]/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Realizar pedido')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "589f24cc-6609-42cc-b6b9-a1d7a3bdbdee",
+      "comment": "",
+      "command": "verifyText",
+      "target": "css=.justify-between:nth-child(2) > span:nth-child(2)",
+      "targets": [],
+      "value": "$4.00"
+    }, {
+      "id": "678aba22-64b6-4b87-87b7-3c644e5e6392",
+      "comment": "",
+      "command": "waitForElementPresent",
+      "target": "css=.inline-flex:nth-child(4)",
+      "targets": [],
+      "value": "30000"
+    }]
+  }, {
+    "id": "ad6e2d13-9f5c-4251-8f38-e94cc62504a8",
+    "name": "R13 - Código inválido - envío local - usuario premium",
+    "commands": [{
+      "id": "45883aca-37e2-4a11-9b83-b627b57edb07",
+      "comment": "",
+      "command": "open",
+      "target": "https://rappi-payment.onrender.com/payment",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "4cde192b-d45c-40ae-8d4a-b782d39432b7",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1280x720",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "1f56c437-6f55-41a8-accd-ea8868fd2d51",
+      "comment": "",
+      "command": "waitForElementPresent",
+      "target": "css=.font-bold",
+      "targets": [
+        ["css=.font-bold", "css:finder"],
+        ["xpath=//a/span", "xpath:position"],
+        ["xpath=//span[contains(.,'Rappi')]", "xpath:innerText"]
+      ],
+      "value": "1200000"
+    }, {
+      "id": "1934ef4f-1e8d-4d5e-8442-4d1b64696226",
+      "comment": "",
+      "command": "click",
+      "target": "css=.bg-card:nth-child(2) > .p-4 .font-semibold",
+      "targets": [
+        ["css=.bg-card:nth-child(2) > .p-4 .font-semibold", "css:finder"],
+        ["xpath=//div[@id='radix-«r0»-content-restaurants']/div/div[2]/div[2]/div/div/div[2]/h3", "xpath:idRelative"],
+        ["xpath=//div[2]/div/div/div[2]/h3", "xpath:position"],
+        ["xpath=//h3[contains(.,'Fast Food Heaven')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "19780301-b52f-4eae-a0b4-e5e33c7fe196",
+      "comment": "",
+      "command": "click",
+      "target": "css=.bg-card:nth-child(2) .inline-flex",
+      "targets": [
+        ["css=.bg-card:nth-child(2) .inline-flex", "css:finder"],
+        ["xpath=//div[@id='radix-«r0»-content-products']/div/div[3]/div[2]/div/div/div[2]/div/button", "xpath:idRelative"],
+        ["xpath=//div[2]/div/div/div[2]/div/button", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "9557627c-2df9-4459-9f45-ba747b6a5043",
+      "comment": "",
+      "command": "click",
+      "target": "css=.justify-between > .rounded-md",
+      "targets": [
+        ["css=.justify-between > .rounded-md", "css:finder"],
+        ["xpath=//div[@id='radix-«r0»-content-products']/div/div/button", "xpath:idRelative"],
+        ["xpath=//div[3]/div[2]/div/div/button", "xpath:position"],
+        ["xpath=//button[contains(.,'1 items • $11.50')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "50c4cfb2-54a1-4fcc-8213-f12651d5b256",
+      "comment": "",
+      "command": "assertElementPresent",
+      "target": "css=.flex-1 > .font-medium",
+      "targets": [
+        ["css=.flex-1 > .font-medium", "css:finder"],
+        ["xpath=//div[@id='radix-«r0»-content-cart']/div/div[2]/div/div/div[2]/h3", "xpath:idRelative"],
+        ["xpath=//h3", "xpath:position"],
+        ["xpath=//h3[contains(.,'Hamburguesa Doble')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "cb87cd3a-9c76-4150-b0f6-2a3c94ce0b8f",
+      "comment": "",
+      "command": "assertElementNotPresent",
+      "target": "css=.text-green-600:nth-child(3)",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "e454ba36-f496-4982-bc07-bb366a64029c",
+      "comment": "",
+      "command": "click",
+      "target": "css=.bg-primary:nth-child(1)",
+      "targets": [
+        ["css=.bg-primary:nth-child(1)", "css:finder"],
+        ["xpath=//div[@id='radix-«r0»-content-cart']/div/div[4]/div[3]/button", "xpath:idRelative"],
+        ["xpath=//div[4]/div[3]/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Continuar con la dirección')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "46a7efd6-77eb-4490-b791-125c6e2491aa",
+      "comment": "",
+      "command": "click",
+      "target": "css=.bg-card:nth-child(1) > .p-4 .text-muted-foreground:nth-child(2)",
+      "targets": [
+        ["css=.bg-card:nth-child(1) > .p-4 .text-muted-foreground:nth-child(2)", "css:finder"],
+        ["xpath=//div[@id='radix-«r0»-content-address']/div/div[2]/div/div/div/div[2]/p", "xpath:idRelative"],
+        ["xpath=//p", "xpath:position"],
+        ["xpath=//p[contains(.,'Calle Principal 123')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "6de59df4-b73f-40ef-b9e4-faaf19549f2f",
+      "comment": "",
+      "command": "assertElementPresent",
+      "target": "css=.lucide:nth-child(2)",
+      "targets": [
+        ["css=.lucide:nth-child(2)", "css:finder"]
+      ],
+      "value": ""
+    }, {
+      "id": "7fe3bf7d-da4f-4284-be56-12c343e11a51",
+      "comment": "",
+      "command": "click",
+      "target": "css=.hover\\3A bg-primary\\/90",
+      "targets": [
+        ["css=.hover\\3A bg-primary\\/90", "css:finder"],
+        ["xpath=//div[@id='radix-«r0»-content-address']/div/div[3]/div/button", "xpath:idRelative"],
+        ["xpath=//div[3]/div/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Continuar con el pago')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "8d6d7781-c17b-4d8c-81de-04bfbcb0d07f",
+      "comment": "",
+      "command": "click",
+      "target": "css=.px-3:nth-child(3)",
+      "targets": [
+        ["css=.px-3:nth-child(1)", "css:finder"],
+        ["xpath=//div[@id='radix-«r0»-content-payment']/div/div[2]/div/button", "xpath:idRelative"],
+        ["xpath=//div[2]/div/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Usuario nuevo')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "4343b593-a35a-4aeb-8e03-1906bff7b8fc",
+      "comment": "",
+      "command": "assertText",
+      "target": "css=.text-green-600:nth-child(2)",
+      "targets": [
+        ["css=.text-green-600:nth-child(2)", "css:finder"],
+        ["xpath=//div[@id='radix-«rb»-content-payment']/div/div[4]/div/div/div[2]/span[2]", "xpath:idRelative"],
+        ["xpath=//div[2]/span[2]", "xpath:position"],
+        ["xpath=//span[contains(.,'-$2.00')]", "xpath:innerText"]
+      ],
+      "value": "-$0.58"
+    }, {
+      "id": "5f538917-4d9e-48d7-bb22-db3f305d3029",
+      "comment": "",
+      "command": "click",
+      "target": "css=.bg-card:nth-child(3) > .p-4",
+      "targets": [
+        ["css=.bg-card:nth-child(3) > .p-4", "css:finder"],
+        ["xpath=//div[@id='radix-«r0»-content-payment']/div/div[3]/div[3]/div", "xpath:idRelative"],
+        ["xpath=//div[3]/div[3]/div", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "20ca4bb8-a297-4fe0-b883-2f664465149e",
+      "comment": "",
+      "command": "click",
+      "target": "css=.px-4",
+      "targets": [
+        ["css=.px-4", "css:finder"],
+        ["xpath=//div[@id='radix-«r0»-content-payment']/div/div[4]/div[2]/button", "xpath:idRelative"],
+        ["xpath=//div[2]/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Realizar pedido')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "d69e16a5-a6a6-4446-a4df-f350fb546f9e",
+      "comment": "",
+      "command": "assertText",
+      "target": "css=.justify-between:nth-child(3) > span:nth-child(2)",
+      "targets": [
+        ["css=.justify-between:nth-child(3) > span:nth-child(2)", "css:finder"],
+        ["xpath=//div[@id='radix-«r0»-content-confirmation']/div/div[2]/div/div[7]/div[3]/span[2]", "xpath:idRelative"],
+        ["xpath=//div[3]/span[2]", "xpath:position"],
+        ["xpath=//span[contains(.,'$2.50')]", "xpath:innerText"]
+      ],
+      "value": "$2.50"
+    }, {
+      "id": "683788b3-436c-46df-9c14-412d4b2c4371",
+      "comment": "",
+      "command": "waitForElementPresent",
+      "target": "css=.inline-flex:nth-child(4)",
+      "targets": [],
+      "value": "30000"
+    }]
+  }, {
+    "id": "7469f949-c15a-4893-b323-030e0cdac86e",
+    "name": "R16 - Código inválido - envío local - usuario regular",
+    "commands": [{
+      "id": "ddc6975d-077d-4f6d-b86d-7e90ac3e8f18",
+      "comment": "",
+      "command": "open",
+      "target": "https://rappi-payment.onrender.com/payment",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "4b40c976-fea8-4a6a-ae35-dba651ef1d3e",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1280x720",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "beb20ca2-80ec-40bb-8eb1-645ae62069c8",
+      "comment": "",
+      "command": "waitForElementPresent",
+      "target": "css=.font-bold",
+      "targets": [
+        ["css=.font-bold", "css:finder"],
+        ["xpath=//a/span", "xpath:position"],
+        ["xpath=//span[contains(.,'Rappi')]", "xpath:innerText"]
+      ],
+      "value": "1200000"
+    }, {
+      "id": "ef5db73f-f550-47fb-95b8-16376561cb30",
+      "comment": "",
+      "command": "click",
+      "target": "css=.bg-card:nth-child(2) > .p-4 .font-semibold",
+      "targets": [
+        ["css=.bg-card:nth-child(2) > .p-4 .font-semibold", "css:finder"],
+        ["xpath=//div[@id='radix-«r0»-content-restaurants']/div/div[2]/div[2]/div/div/div[2]/h3", "xpath:idRelative"],
+        ["xpath=//div[2]/div/div/div[2]/h3", "xpath:position"],
+        ["xpath=//h3[contains(.,'Fast Food Heaven')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "c0f6cc67-ae9b-46d3-911c-97cb0ace886d",
+      "comment": "",
+      "command": "click",
+      "target": "css=.bg-card:nth-child(2) .inline-flex",
+      "targets": [
+        ["css=.bg-card:nth-child(2) .inline-flex", "css:finder"],
+        ["xpath=//div[@id='radix-«r0»-content-products']/div/div[3]/div[2]/div/div/div[2]/div/button", "xpath:idRelative"],
+        ["xpath=//div[2]/div/div/div[2]/div/button", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "9706c655-d01a-442f-897b-08acd2db09bb",
+      "comment": "",
+      "command": "click",
+      "target": "css=.justify-between > .rounded-md",
+      "targets": [
+        ["css=.justify-between > .rounded-md", "css:finder"],
+        ["xpath=//div[@id='radix-«r0»-content-products']/div/div/button", "xpath:idRelative"],
+        ["xpath=//div[3]/div[2]/div/div/button", "xpath:position"],
+        ["xpath=//button[contains(.,'1 items • $11.50')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "946db9c9-85df-493e-9d89-296f6244e8c1",
+      "comment": "",
+      "command": "assertElementPresent",
+      "target": "css=.flex-1 > .font-medium",
+      "targets": [
+        ["css=.flex-1 > .font-medium", "css:finder"],
+        ["xpath=//div[@id='radix-«r0»-content-cart']/div/div[2]/div/div/div[2]/h3", "xpath:idRelative"],
+        ["xpath=//h3", "xpath:position"],
+        ["xpath=//h3[contains(.,'Hamburguesa Doble')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "5a1e4b2b-0320-4feb-aae0-ea4e19c725d3",
+      "comment": "",
+      "command": "assertElementNotPresent",
+      "target": "css=.text-green-600:nth-child(3)",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "f0acaee0-4ef0-4d53-a7ee-6887988cb1ef",
+      "comment": "",
+      "command": "click",
+      "target": "css=.bg-primary:nth-child(1)",
+      "targets": [
+        ["css=.bg-primary:nth-child(1)", "css:finder"],
+        ["xpath=//div[@id='radix-«r0»-content-cart']/div/div[4]/div[3]/button", "xpath:idRelative"],
+        ["xpath=//div[4]/div[3]/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Continuar con la dirección')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "04590e5d-4352-464f-a7d4-185750b82398",
+      "comment": "",
+      "command": "click",
+      "target": "css=.bg-card:nth-child(1) > .p-4 .text-muted-foreground:nth-child(2)",
+      "targets": [
+        ["css=.bg-card:nth-child(1) > .p-4 .text-muted-foreground:nth-child(2)", "css:finder"],
+        ["xpath=//div[@id='radix-«r0»-content-address']/div/div[2]/div/div/div/div[2]/p", "xpath:idRelative"],
+        ["xpath=//p", "xpath:position"],
+        ["xpath=//p[contains(.,'Calle Principal 123')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "cd039672-e65e-46f0-8f5c-0cab179b4307",
+      "comment": "",
+      "command": "assertElementPresent",
+      "target": "css=.lucide:nth-child(2)",
+      "targets": [
+        ["css=.lucide:nth-child(2)", "css:finder"]
+      ],
+      "value": ""
+    }, {
+      "id": "10796939-c213-4e53-b16e-666d51de5e85",
+      "comment": "",
+      "command": "click",
+      "target": "css=.hover\\3A bg-primary\\/90",
+      "targets": [
+        ["css=.hover\\3A bg-primary\\/90", "css:finder"],
+        ["xpath=//div[@id='radix-«r0»-content-address']/div/div[3]/div/button", "xpath:idRelative"],
+        ["xpath=//div[3]/div/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Continuar con el pago')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "47ca88c1-92b8-41ae-9c35-68a6d69f6cb8",
+      "comment": "",
+      "command": "click",
+      "target": "css=.px-3:nth-child(2)",
+      "targets": [
+        ["css=.px-3:nth-child(1)", "css:finder"],
+        ["xpath=//div[@id='radix-«r0»-content-payment']/div/div[2]/div/button", "xpath:idRelative"],
+        ["xpath=//div[2]/div/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Usuario nuevo')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "c83d04c0-5a88-49b4-89e8-6bda231ec5d3",
+      "comment": "",
+      "command": "assertElementNotPresent",
+      "target": "css=.text-green-600:nth-child(2)",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "df93afed-25fb-4b5b-8876-334172477a57",
+      "comment": "",
+      "command": "click",
+      "target": "css=.bg-card:nth-child(3) > .p-4",
+      "targets": [
+        ["css=.bg-card:nth-child(3) > .p-4", "css:finder"],
+        ["xpath=//div[@id='radix-«r0»-content-payment']/div/div[3]/div[3]/div", "xpath:idRelative"],
+        ["xpath=//div[3]/div[3]/div", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "21090794-5fb6-4c48-b981-5a11f5ee8c91",
+      "comment": "",
+      "command": "click",
+      "target": "css=.px-4",
+      "targets": [
+        ["css=.px-4", "css:finder"],
+        ["xpath=//div[@id='radix-«r0»-content-payment']/div/div[4]/div[2]/button", "xpath:idRelative"],
+        ["xpath=//div[2]/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Realizar pedido')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "ef36709a-9291-43bd-939d-926e9a676cff",
+      "comment": "",
+      "command": "assertText",
+      "target": "css=.justify-between:nth-child(2) > span:nth-child(2)",
+      "targets": [
+        ["css=.justify-between:nth-child(2) > span:nth-child(2)", "css:finder"],
+        ["xpath=//div[@id='radix-«r0»-content-confirmation']/div/div[2]/div/div[7]/div[2]/span[2]", "xpath:idRelative"],
+        ["xpath=//div[2]/span[2]", "xpath:position"],
+        ["xpath=//span[contains(.,'$2.50')]", "xpath:innerText"]
+      ],
+      "value": "$2.50"
+    }, {
+      "id": "18e51dc3-496e-45d9-88f8-9ed00083e717",
+      "comment": "",
+      "command": "waitForElementPresent",
+      "target": "css=.inline-flex:nth-child(4)",
+      "targets": [],
+      "value": "30000"
+    }]
+  }],
+  "suites": [{
+    "id": "2684ede6-eae0-4893-8e24-ec27a28a1f50",
+    "name": "Proceso de compra",
+    "persistSession": false,
+    "parallel": true,
+    "timeout": 300,
+    "tests": ["490f663e-07c3-41eb-bb8d-5fecbaf1807d", "48fe6632-eab8-4af8-bfe7-59a6f126cfe9", "e8805b37-481c-49e3-bfc5-d21bb45b0ddc", "d22a2603-642a-4d04-be57-873f226df540", "af4becb8-930e-4c0a-b756-3096e7e38f40", "caee3878-8a90-4baa-976e-44ba3930ffa1", "1127b711-f91b-43d8-a442-7ccb3e1e43e4"]
+  }, {
+    "id": "79a8b595-7e88-44a6-b64b-6289d1040cb8",
+    "name": "Proceso de pago",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": ["9814b6dc-2f4b-4867-83e1-6240d73d8649", "cb54b60c-b1f5-41a9-b86e-da73cda4206c", "662abcc4-5a7d-4f32-958d-43157760b9ea", "0ae75c61-7848-4ff7-8856-77d0993d1322", "ad6e2d13-9f5c-4251-8f38-e94cc62504a8", "7469f949-c15a-4893-b323-030e0cdac86e", "8dacac52-cc85-4090-b7c8-979c44a348e8", "2b881c0f-16b1-4be1-a6dd-928ef179ec99", "10fcaf01-fec8-478b-b6b0-4189c8919805", "cc36a325-4a65-43e8-853d-887f1d39c078", "294d0fc8-e9c6-4cb0-bbdc-716c07171977", "eca38156-89a5-4d6e-b565-9b896139a191", "48064744-eadd-4f3a-9d95-59fb639739f7", "ddd3feca-2db8-4f07-a321-cfc8a021572d", "10d14792-693a-48f4-a337-bacfafc36cfa", "9eb8939d-fb7d-446b-863e-ee211e677775", "706c6961-64f5-48cb-8926-6e156c0d4ae2", "5c93389c-a754-4e49-a7e0-7e1569647138"]
+  }],
+  "urls": ["https://rappi-payment.onrender.com/payment"],
+  "plugins": []
+}
